@@ -16,7 +16,3 @@ env/
 
 # Scraper specific
 error_screenshot_*.png
-
-# Keep data directory but ignore contents
-data/*
-!data/.gitkeep
