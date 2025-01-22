@@ -1,6 +1,6 @@
-# CMU Tech Transfer Scraper
+# Tech Transfer Scraper
 
-A Python-based web scraper that extracts technology transfer listings from Carnegie Mellon University's Flintbox platform.
+A Python-based web scraper that extracts technology transfer listings.
 
 ## Overview
 
