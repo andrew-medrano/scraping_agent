@@ -1,10 +1,13 @@
-# Tech Transfer Scraper
+# Tech Transfer Pipeline
 
-A Python-based web scraper that extracts technology transfer listings.
+A complete pipeline for scraping, summarizing, and embedding technology transfer listings from Carnegie Mellon University's Flintbox platform.
 
 ## Overview
 
-This scraper uses Playwright and AgentQL to navigate and extract data from CMU's technology transfer website. It captures details about each technology listing including titles, descriptions, patent information, and publication dates.
+This pipeline consists of three main components:
+1. **Scraper**: Extracts technology listings from CMU's Flintbox
+2. **Summarizer**: Generates AI summaries and teasers for each technology
+3. **Embedder**: Creates vector embeddings for semantic search
 
 ## Setup
 
@@ -20,92 +23,125 @@ pip install -r requirements.txt
 playwright install
 ```
 
-3. Create a `.env` file in the project root with your AgentQL API key:
-```
-AGENTQL_API_KEY=your_key_here
+3. Create a `.env` file with your API keys:
+```env
+AGENTQL_API_KEY=your_agentql_key
+DEEPSEEK_API_KEY=your_deepseek_key
+DEEPSEEK_BASE_URL=your_deepseek_url
+PINECONE_API_KEY=your_pinecone_key
 ```
 
-## Usage
+## Running the Pipeline
 
-Run the scraper:
+### Option 1: Complete Pipeline
+
+Run the entire pipeline with one command:
+```bash
+python run_pipeline.py --max-pages 3 --index-name tech-transfer
+```
+
+Options:
+- `--max-pages`: Number of pages to scrape (default: 3)
+- `--index-name`: Name for the Pinecone index (default: tech-transfer)
+
+### Option 2: Individual Components
+
+You can run each component separately:
+
+1. **Scraper**:
 ```bash
 python scraper.py
 ```
+- Scrapes technology listings
+- Saves to `data/tech_transfer_results.json`
 
-By default, it will:
-- Scrape up to 3 pages of results
-- Save data to `data/tech_transfer_results.json`
-- Show progress in the terminal
-- Take screenshots of any errors
-
-## Data Storage
-
-All scraped data is stored in the `data/` directory:
-- Main results file: `data/tech_transfer_results.json`
-- Error screenshots: `error_screenshot_X.png` (in project root)
-
-The data directory is version controlled but its contents are gitignored. This ensures:
-1. The directory structure is preserved
-2. Scraped data doesn't clutter the git history
-3. Sensitive data isn't accidentally committed
-
-## Data Structure
-
-The scraper saves data in JSON format with the following structure for each technology:
-```json
-{
-    "ip_name": "Technology Title",
-    "ip_number": "Reference Number",
-    "published_date": "Publication Date",
-    "ip_description": "Detailed Description",
-    "patents": "Related Patent Numbers",
-    "page_url": "Full URL of the listing"
-}
+2. **Summarizer**:
+```bash
+python summarization_service.py
 ```
+- Generates summaries and teasers
+- Saves to `data/tech_transfer_results_summarized.json`
 
-## Customization
+3. **Embedder**:
+```bash
+python embedding_service.py --input-dir data --index-name tech-transfer
+```
+- Creates vector embeddings
+- Uploads to Pinecone database
 
-### Modifying Search Parameters
-To change what data is extracted, modify the query templates in `scraper.py`:
-- `LIST_BUTTON_QUERY`: Identifies the list view button
-- `LIST_PAGE_QUERY`: Extracts listing previews and navigation
-- `RESULT_PAGE_QUERY`: Defines what data to extract from each listing
+## Data Pipeline
 
-### Adjusting Scraping Behavior
-In `scraper.py`:
-- Change `max_pages` in `scrape_tech_transfer()` to adjust how many pages to scrape
-- Modify `save_results()` to change where/how data is saved
-- Update error handling in `process_single_result()` for different error scenarios
+See `data_format.md` for detailed information about:
+- Data structure at each stage
+- Field descriptions
+- Example JSON formats
+- Vector database schema
 
-### Adding New Features
-The code is modular with clear separation of concerns:
-- `initialize_page()`: Browser setup
-- `switch_to_list_view()`: Navigation
-- `process_single_result()`: Individual listing processing
-- `process_page_results()`: Page-level processing
-- `scrape_tech_transfer()`: Overall orchestration
+## Directory Structure
 
-Add new functions or modify existing ones based on your needs.
+```
+.
+├── data/                      # Data directory
+│   ├── .gitkeep
+│   ├── tech_transfer_results.json
+│   └── tech_transfer_results_summarized.json
+├── scraper.py                 # Web scraping service
+├── summarization_service.py   # AI summarization service
+├── embedding_service.py       # Vector embedding service
+├── run_pipeline.py           # Pipeline orchestrator
+├── data_format.md            # Data format documentation
+├── requirements.txt          # Python dependencies
+└── README.md                 # This file
+```
 
 ## Error Handling
 
-- Failed scrapes create screenshots in the project root (`error_screenshot_X.png`)
-- Progress is saved after each page in case of interruption
-- Errors for individual listings don't stop the entire process
+- Failed scrapes create screenshots (`error_screenshot_X.png`)
+- Progress is saved after each entry
+- Each service can be rerun independently
+- Pipeline maintains state between steps
 
-## Dependencies
+## Customization
 
-- `playwright`: Web automation
-- `agentql`: Web scraping assistance
-- `python-dotenv`: Environment variable management
-- `pyairtable`: (Optional) For Airtable integration
+### Scraper
+- Modify `RESULT_PAGE_QUERY` in `scraper.py` to extract different fields
+- Adjust page wait times for slower connections
+- Change headless mode for debugging
 
-## Future Improvements
+### Summarizer
+- Update prompt templates in `summarization_service.py`
+- Modify summary structure
+- Adjust token limits
 
-Potential enhancements:
-1. Add retry logic for failed scrapes
-2. Implement rate limiting
-3. Add data validation
-4. Create data export options (CSV, Excel)
-5. Add command line arguments for configuration
-6. Implement parallel processing for faster scraping
+### Embedder
+- Change embedding model
+- Modify metadata fields
+- Adjust batch sizes
+
+## Troubleshooting
+
+1. **Scraper Issues**
+   - Check screenshots in error_screenshot_*.png
+   - Verify AgentQL API key
+   - Ensure stable internet connection
+
+2. **Summarizer Issues**
+   - Verify DeepSeek API key and base URL
+   - Check input JSON format
+   - Monitor token usage
+
+3. **Embedder Issues**
+   - Verify Pinecone API key
+   - Check index dimensions
+   - Monitor batch processing
+
+## Contributing
+
+1. Fork the repository
+2. Create a feature branch
+3. Make your changes
+4. Submit a pull request
+
+## License
+
+MIT License - See LICENSE file for details

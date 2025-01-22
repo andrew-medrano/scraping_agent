@@ -1,0 +1,96 @@
+# Tech Transfer Pipeline Rules
+
+## Codebase Structure
+This is a pipeline for scraping, summarizing, and embedding technology transfer listings. It consists of:
+
+1. Core Services:
+   - scraper.py: Web scraping using AgentQL and Playwright
+   - summarization_service.py: AI summarization using DeepSeek
+   - embedding_service.py: Vector embeddings using Pinecone
+   - run_pipeline.py: Pipeline orchestrator
+
+2. Documentation:
+   - README.md: Main documentation and usage guide
+   - data_format.md: Data structure specifications
+   - LICENSE: MIT license
+
+3. Data:
+   - data/*.json: JSON files containing tech transfer data
+   - data/.gitkeep: Maintains directory structure
+
+## Documentation Rules
+
+When modifying files, update the following documentation:
+
+1. If changing data formats:
+   - Update data_format.md
+   - Update relevant sections in README.md
+   - Update docstrings in affected services
+
+2. If modifying scraper.py:
+   - Update AgentQL queries in code comments
+   - Update data_format.md "After Scraping" section
+   - Update README.md scraper customization section
+
+3. If modifying summarization_service.py:
+   - Update prompt templates in code comments
+   - Update data_format.md "After Summarization" section
+   - Update README.md summarizer customization section
+
+4. If modifying embedding_service.py:
+   - Update metadata fields in code comments
+   - Update data_format.md "Vector Database Format" section
+   - Update README.md embedder customization section
+
+5. If modifying run_pipeline.py:
+   - Update pipeline steps in code comments
+   - Update README.md pipeline execution section
+
+## File Dependencies
+
+- scraper.py → data/[university]_results.json
+- summarization_service.py → data/[university]_results_summarized.json
+- embedding_service.py reads from data/*.json
+- run_pipeline.py imports all services
+
+## Environment Variables
+
+When modifying services, ensure .env requirements are documented in:
+- README.md setup section
+- .env.example (if exists)
+- Relevant service files
+
+## Error Handling
+
+When modifying error handling:
+- Update README.md troubleshooting section
+- Update error screenshots naming convention
+- Update logging configuration
+
+## Command Line Arguments
+
+When adding/modifying CLI arguments:
+- Update README.md usage section
+- Update argparse help text
+- Update pipeline orchestrator if needed
+
+## Code Style
+
+Follow these conventions:
+- Use docstrings for all functions
+- Include type hints where helpful
+- Keep consistent error handling patterns
+- Maintain modular service structure
+
+## Testing
+
+When adding features:
+- Add example usage in README.md
+- Update troubleshooting guides
+- Document edge cases
+
+## Version Control
+
+- Keep data directory structure but ignore contents
+- Track all documentation changes
+- Include meaningful commit messages 

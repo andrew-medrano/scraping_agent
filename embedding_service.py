@@ -8,7 +8,7 @@ from pathlib import Path
 load_dotenv()
 
 class TechTransferEmbeddings:
-    def __init__(self, input_dir='data', index_name='tech-transfer'):
+    def __init__(self, input_dir='data/summarized', index_name='tech-transfer-01222024'):
         self.input_dir = input_dir
         self.pc = None
         self.index_name = index_name
@@ -75,6 +75,7 @@ class TechTransferEmbeddings:
             
             # Create metadata
             metadata = {
+                "university": entry.get('university', ''),
                 "title": entry.get('ip_name', ''),
                 "number": entry.get('ip_number', ''),
                 "description": entry.get('ip_description', ''),
@@ -84,7 +85,7 @@ class TechTransferEmbeddings:
             }
             
             self.formatted_data.append({
-                "id": f"tech_{i}",
+                "id": f"{entry.get('university', '').lower().replace(' ', '-')}_{entry.get('id', '').lower().replace(' ', '-')}", # university_code_id
                 "text": text_for_embedding,
                 "metadata": metadata
             })

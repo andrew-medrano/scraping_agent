@@ -2,7 +2,7 @@
 
 This document outlines the data structure at each stage of the tech transfer pipeline.
 
-## 1. After Scraping (`data/tech_transfer_results.json`)
+## 1. After Scraping (`data/raw/university.json`)
 
 Raw data from the website, stored as a JSON array of objects:
 
@@ -20,7 +20,7 @@ Raw data from the website, stored as a JSON array of objects:
 ]
 ```
 
-## 2. After Summarization (`data/tech_transfer_results_summarized.json`)
+## 2. After Summarization (`data/summarized/university_summarized.json`)
 
 Enhanced data with AI-generated summaries and teasers:
 
@@ -37,7 +37,8 @@ Enhanced data with AI-generated summaries and teasers:
     
     // Added by summarization service
     "llm_summary": "**Summary:** This technology introduces a novel approach to quantum computing using topological qubits.\n\n**Applications:** Cryptography, drug discovery, and financial modeling.\n\n**Problem Solved:** Addresses the stability issues in current quantum computing systems.",
-    "llm_teaser": "Revolutionary quantum computing method that increases qubit stability by 100x while reducing error rates."
+    "llm_teaser": "Revolutionary quantum computing method that increases qubit stability by 100x while reducing error rates.",
+    "university": "Carnegie Mellon University"
   },
   // ... more entries
 ]
@@ -50,16 +51,17 @@ The data is split into two components when stored in Pinecone:
 ### 3.1 Text for Embedding
 Combined text that gets converted into a vector embedding:
 ```text
-{ip_name}. {ip_description}
+{ip_name}. {ip_description}. {llm_summary}.
 ```
 
 ### 3.2 Metadata
 Stored alongside the vector for filtering and retrieval:
 ```json
 {
-  "id": "tech_0",
+  "id": "cmu_REF-2024-001",
   "values": [0.123, -0.456, ...],  // 1024-dimensional vector
   "metadata": {
+    "university": "Carnegie Mellon University",
     "title": "Novel Method for Quantum Computing",
     "number": "REF-2024-001",
     "description": "A groundbreaking approach to quantum computing...",
@@ -94,6 +96,7 @@ Stored alongside the vector for filtering and retrieval:
   - Applications section: Use cases
   - Problem Solved section: Issues addressed
 - `llm_teaser`: One-sentence highlight
+- `university`: University name
 
 ### Vector Database Fields
 - `id`: Unique identifier (university_ipnumber, e.g. "cmu_REF-2024-001")

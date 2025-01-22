@@ -3,26 +3,40 @@ import os
 from dotenv import load_dotenv
 from tqdm import tqdm
 from openai import OpenAI
+from pathlib import Path
+import multiprocessing
+from functools import partial
 
 load_dotenv()
 
+UNIVERSITY_NAMES = {
+    'cmu': 'Carnegie Mellon University',
+    'mit': 'Massachusetts Institute of Technology',
+    'stanford': 'Stanford University',
+    'harvard': 'Harvard University',
+    # Add more universities as needed
+}
+
 class TechTransferSummarizer:
-    def __init__(self, input_file='data/tech_transfer_results.json', output_file=None):
-        self.input_file = input_file
-        self.output_file = output_file or input_file.replace('.json', '_summarized.json')
+    def __init__(self, input_dir='data/raw', output_dir='data/summarized'):
+        self.input_dir = Path(input_dir)
+        self.output_dir = Path(output_dir)
         self.client = OpenAI(api_key=os.getenv('DEEPSEEK_API_KEY'), base_url=os.getenv('DEEPSEEK_BASE_URL'))
         
-    def load_data(self):
+    def load_data(self, input_file):
         """Load data from JSON file"""
-        print(f"Loading data from {self.input_file}...")
-        with open(self.input_file, 'r') as f:
+        print(f"Loading data from {input_file}...")
+        with open(input_file, 'r') as f:
             self.data = json.load(f)
         print(f"Loaded {len(self.data)} technology entries")
     
-    def save_data(self):
+    def save_data(self, output_file):
         """Save processed data to JSON file"""
-        print(f"Saving results to {self.output_file}...")
-        with open(self.output_file, 'w') as f:
+        # Ensure output directory exists
+        self.output_dir.mkdir(parents=True, exist_ok=True)
+        
+        print(f"Saving results to {output_file}...")
+        with open(output_file, 'w') as f:
             json.dump(self.data, f, indent=2)
         print("Save complete!")
 
@@ -51,7 +65,7 @@ class TechTransferSummarizer:
             model="deepseek-chat",
             messages=[{"role": "user", "content": prompt}],
             temperature=0.3,
-            max_tokens=500
+            max_tokens=800
         )
         return response.choices[0].message.content.strip()
 
@@ -74,32 +88,85 @@ class TechTransferSummarizer:
         )
         return response.choices[0].message.content.strip()
 
-    def process_entries(self):
-        """Process all entries with summaries and teasers"""
+    def process_single_entry(self, entry, university_name):
+        """Process a single entry with summary and teaser"""
+        title = entry.get('ip_name', '')
+        description = entry.get('ip_description', '')
+        
+        try:
+            # Generate summary and teaser
+            entry['llm_summary'] = self.generate_summary(title, description)
+            entry['llm_teaser'] = self.generate_teaser(title, description)
+            # Add university name
+            entry['university'] = university_name
+            return entry
+        except Exception as e:
+            print(f"\nError processing entry '{title}': {str(e)}")
+            return entry
+
+    def process_entries(self, university_code):
+        """Process all entries with summaries and teasers in parallel"""
         print("Processing entries...")
-        for entry in tqdm(self.data):
-            title = entry.get('ip_name', '')
-            description = entry.get('ip_description', '')
+        university_name = UNIVERSITY_NAMES.get(university_code, university_code.upper())
+        
+        # Use half of available CPU cores for API calls
+        num_processes = max(1, multiprocessing.cpu_count() // 2)
+        
+        with multiprocessing.Pool(num_processes) as pool:
+            # Create partial function with fixed university_name
+            process_func = partial(self.process_single_entry, university_name=university_name)
             
-            try:
-                # Generate summary and teaser
-                entry['llm_summary'] = self.generate_summary(title, description)
-                entry['llm_teaser'] = self.generate_teaser(title, description)
-                
-                # Save after each entry to maintain progress
-                self.save_data()
-                
-            except Exception as e:
-                print(f"\nError processing entry '{title}': {str(e)}")
-                continue
+            # Process entries in parallel
+            self.data = list(tqdm(
+                pool.imap(process_func, self.data),
+                total=len(self.data)
+            ))
+            
+        # Save results
+        output_file = self.output_dir / f"{university_code}_summarized.json"
+        self.save_data(output_file)
+
+def process_single_entry(entry, university_code):
+    """Process a single entry with summary and teaser - standalone function for multiprocessing"""
+    summarizer = TechTransferSummarizer()  # Create new instance for each process
+    university_name = UNIVERSITY_NAMES.get(university_code, university_code.upper())
+    
+    return summarizer.process_single_entry(entry, university_name)
 
 def run_summarization_pipeline():
-    """Run the complete summarization pipeline"""
-    summarizer = TechTransferSummarizer()
-    
+    """Run the complete summarization pipeline with parallel API calls"""
     try:
-        summarizer.load_data()
-        summarizer.process_entries()
+        # Get list of files to process
+        input_files = list(Path('data/raw').glob('*.json'))
+        summarizer = TechTransferSummarizer()
+        
+        for input_file in input_files:
+            university_code = input_file.stem
+            
+            # Check if summarized file already exists
+            summarized_file = Path('data/summarized') / f"{university_code}_summarized.json"
+            if summarized_file.exists():
+                print(f"\nSkipping {university_code} - summarized file already exists")
+                continue
+                
+            print(f"\nProcessing {university_code} data...")
+            summarizer.load_data(input_file)
+            
+            # Use half of available CPU cores for API calls
+            num_processes = max(1, multiprocessing.cpu_count() // 2)
+            
+            # Process entries in parallel
+            with multiprocessing.Pool(num_processes) as pool:
+                process_func = partial(process_single_entry, university_code=university_code)
+                summarizer.data = list(tqdm(
+                    pool.imap(process_func, summarizer.data),
+                    total=len(summarizer.data)
+                ))
+            
+            # Save results
+            output_file = summarizer.output_dir / f"{university_code}_summarized.json"
+            summarizer.save_data(output_file)
+            
         print("Summarization pipeline completed successfully!")
     except Exception as e:
         print(f"Error in summarization pipeline: {e}")
