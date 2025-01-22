@@ -47,10 +47,10 @@ logging.getLogger('asyncio').setLevel(logging.WARNING)
 logger = logging.getLogger(__name__)
 logger.setLevel(logging.ERROR)
 
-def save_results(results, filename='tech_transfer_results.json'):
+def save_results(results, filename='data/raw/cmu_raw.json'):
     """Save results to JSON file in the data directory"""
     # Ensure data directory exists
-    os.makedirs('data', exist_ok=True)
+    os.makedirs('data/raw', exist_ok=True)
     
     # Save to data directory
     filepath = os.path.join('data', filename)

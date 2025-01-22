@@ -69,36 +69,62 @@ class TechTransferEmbeddings:
         print("Preparing texts for embedding...")
         self.formatted_data = []
         
+        # Add debug logging
+        used_ids = set()
+        
         for i, entry in enumerate(self.data):
-            # Combine relevant fields for embedding
-            text_for_embedding = f"{entry.get('ip_name', '')}. {entry.get('ip_description', '')}"
+            # Generate ID
+            entry_id = f"{entry.get('university', '').lower().replace(' ', '-')}_{entry.get('ip_number', '').lower().replace(' ', '-')}"
             
-            # Create metadata
+            # Debug: Check for ID collisions
+            if entry_id in used_ids:
+                print(f"WARNING: Duplicate ID found: {entry_id}")
+            used_ids.add(entry_id)
+            
+            # Rest of the preparation code...
+            text_for_embedding = f"{entry.get('ip_name', '')}. {entry.get('ip_description', '')} {entry.get('llm_summary', '')}"
+            
+            # Create metadata with null value handling
             metadata = {
                 "university": entry.get('university', ''),
                 "title": entry.get('ip_name', ''),
                 "number": entry.get('ip_number', ''),
                 "description": entry.get('ip_description', ''),
+                "llm_teaser": entry.get('llm_teaser', ''),
+                "llm_summary": entry.get('llm_summary', ''),
                 "published_date": entry.get('published_date', ''),
-                "patents": entry.get('patents', ''),
+                "patents": entry.get('patents', []),
                 "page_url": entry.get('page_url', '')
             }
             
+            cleaned_metadata = {k: [] if v is None and isinstance(v, (list, tuple)) else "" if v is None else v 
+                              for k, v in metadata.items()}
+            
             self.formatted_data.append({
-                "id": f"{entry.get('university', '').lower().replace(' ', '-')}_{entry.get('id', '').lower().replace(' ', '-')}", # university_code_id
+                "id": entry_id,
                 "text": text_for_embedding,
-                "metadata": metadata
+                "metadata": cleaned_metadata
             })
-        
+            
         print(f"Prepared {len(self.formatted_data)} entries for embedding")
+        print(f"Number of unique IDs: {len(used_ids)}")
 
     def generate_embeddings(self):
         """Generate and upload embeddings to Pinecone"""
         print("Generating embeddings...")
         batch_size = 20
         
+        # Debug: Track processed entries
+        processed_count = 0
+        
         for i in tqdm(range(0, len(self.formatted_data), batch_size), desc="Processing batches"):
             batch = self.formatted_data[i:i + batch_size]
+            
+            # Debug: Print batch info
+            print(f"\nProcessing batch {i//batch_size + 1}")
+            print(f"Batch size: {len(batch)}")
+            print(f"First ID in batch: {batch[0]['id']}")
+            print(f"Last ID in batch: {batch[-1]['id']}")
             
             # Generate embeddings for batch
             batch_embeddings = self.pc.inference.embed(
@@ -116,13 +142,20 @@ class TechTransferEmbeddings:
                     "metadata": d['metadata']
                 })
             
+            # Debug: Print vector info
+            print(f"Number of vectors to upload: {len(vectors)}")
+            
             # Upload to Pinecone
             index = self.pc.Index(self.index_name)
             index.upsert(vectors=vectors, namespace="tech_transfer")
             
+            processed_count += len(vectors)
+            print(f"Total processed entries: {processed_count}")
+            
+        print(f"Final processed count: {processed_count}")
         print("Embedding generation and upload complete")
 
-def run_embedding_pipeline(input_dir='data', index_name='tech-transfer'):
+def run_embedding_pipeline(input_dir='data/summarized', index_name='tech-transfer'):
     """Run the complete embedding pipeline"""
     embedder = TechTransferEmbeddings(input_dir=input_dir, index_name=index_name)
     
@@ -139,8 +172,8 @@ def run_embedding_pipeline(input_dir='data', index_name='tech-transfer'):
 if __name__ == "__main__":
     import argparse
     parser = argparse.ArgumentParser(description='Generate embeddings for tech transfer data')
-    parser.add_argument('--input-dir', default='data', help='Directory containing JSON files to process')
-    parser.add_argument('--index-name', default='tech-transfer', help='Name of the Pinecone index to use')
+    parser.add_argument('--input-dir', default='data/summarized', help='Directory containing JSON files to process')
+    parser.add_argument('--index-name', default='tech-transfer-01222024', help='Name of the Pinecone index to use')
     args = parser.parse_args()
     
     run_embedding_pipeline(input_dir=args.input_dir, index_name=args.index_name)

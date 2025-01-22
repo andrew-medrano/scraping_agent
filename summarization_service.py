@@ -141,7 +141,7 @@ def run_summarization_pipeline():
         summarizer = TechTransferSummarizer()
         
         for input_file in input_files:
-            university_code = input_file.stem
+            university_code = input_file.stem.split('_')[0] # cmu_raw.json -> cmu
             
             # Check if summarized file already exists
             summarized_file = Path('data/summarized') / f"{university_code}_summarized.json"

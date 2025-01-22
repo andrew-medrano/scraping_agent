@@ -33,36 +33,23 @@ PINECONE_API_KEY=your_pinecone_key
 
 ## Running the Pipeline
 
-### Option 1: Complete Pipeline
-
-Run the entire pipeline with one command:
-```bash
-python run_pipeline.py --max-pages 3 --index-name tech-transfer
-```
-
-Options:
-- `--max-pages`: Number of pages to scrape (default: 3)
-- `--index-name`: Name for the Pinecone index (default: tech-transfer)
-
-### Option 2: Individual Components
-
 You can run each component separately:
 
 1. **Scraper**:
 ```bash
-python scraper.py
+python cmu_scraper.py
 ```
 - Scrapes technology listings
 - Saves to `data/tech_transfer_results.json`
 
-2. **Summarizer**:
+1. **Summarizer**:
 ```bash
 python summarization_service.py
 ```
 - Generates summaries and teasers
 - Saves to `data/tech_transfer_results_summarized.json`
 
-3. **Embedder**:
+1. **Embedder**:
 ```bash
 python embedding_service.py --input-dir data --index-name tech-transfer
 ```
@@ -83,12 +70,17 @@ See `data_format.md` for detailed information about:
 .
 ├── data/                      # Data directory
 │   ├── .gitkeep
-│   ├── tech_transfer_results.json
-│   └── tech_transfer_results_summarized.json
-├── scraper.py                 # Web scraping service
+│   ├── raw/
+│   │   ├── cmu_raw.json
+│   │   └── mit_raw.json
+│   ├── summarized/
+│   │   ├── cmu_summarized.json
+│   │   └── mit_summarized.json
+├── scrapers/
+│   ├── cmu_scraper.py
+│   └── mit_scraper.py
 ├── summarization_service.py   # AI summarization service
 ├── embedding_service.py       # Vector embedding service
-├── run_pipeline.py           # Pipeline orchestrator
 ├── data_format.md            # Data format documentation
 ├── requirements.txt          # Python dependencies
 └── README.md                 # This file
