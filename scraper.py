@@ -48,9 +48,15 @@ logger = logging.getLogger(__name__)
 logger.setLevel(logging.ERROR)
 
 def save_results(results, filename='tech_transfer_results.json'):
-    """Save results to JSON file"""
-    with open(filename, 'w') as f:
+    """Save results to JSON file in the data directory"""
+    # Ensure data directory exists
+    os.makedirs('data', exist_ok=True)
+    
+    # Save to data directory
+    filepath = os.path.join('data', filename)
+    with open(filepath, 'w') as f:
         json.dump(results, f, indent=2)
+    print(f"Results saved to {filepath}")
 
 def initialize_page(browser):
     """Initialize and return a wrapped browser page"""
