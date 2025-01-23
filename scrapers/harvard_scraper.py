@@ -6,10 +6,11 @@ import warnings
 import multiprocessing
 from pathlib import Path
 from typing import List, Dict, Optional
-from dataclasses import dataclass
+from dataclasses import dataclass, field
 from urllib.parse import urljoin
 from tqdm import tqdm
 from functools import partial
+from concurrent.futures import ProcessPoolExecutor
 
 from playwright.async_api import async_playwright, Page, Browser
 from openai import OpenAI
@@ -17,23 +18,25 @@ from openai import OpenAI
 # Configuration
 @dataclass
 class ScraperConfig:
-    start_url: str = "https://tlo.mit.edu/industry-entrepreneurs/available-technologies" # FILL THIS OUT: This is the start URL for the MIT tech transfer site
-    university: str = "mit" # FILL THIS OUT: This is the name of the university
+    start_urls: List[str] = field(default_factory=lambda: [
+        "https://otd.harvard.edu/explore-innovation/technologies/results/?q=&category=all"
+    ])
+    university: str = "harvard"  # FILL THIS OUT: This is the name of the university
     relative_links: bool = True
-    max_pages: int = 20  # 0 means no limit, positive number limits the number of pages to scrape
-    max_results: int = 0  # 0 means no limit, positive number limits the number of results to scrape
-    debug: bool = False  # Enable verbose debug output
-    parallel: bool = True  # Enable parallel processing of detail pages
+    max_pages: int = 0  # 0 means no limit, positive number limits the number of pages to scrape
+    max_results: int = 3  # 0 means no limit, positive number limits the number of results to scrape
+    debug: bool = True  # Enable verbose debug output
+    parallel: bool = False  # Enable parallel processing of detail pages
     jina_api_url: str = 'https://r.jina.ai/'
     jina_api_key: str = os.getenv('JINA_API_KEY')
     deepseek_api_key: str = os.getenv('DEEPSEEK_API_KEY')
     deepseek_base_url: str = os.getenv('DEEPSEEK_BASE_URL')
     selectors = {
-        'item_links': ".views-row .arrow-text",
-        'next_button': ".pager__item--next"
+        'item_links': ".mb-8 .no-underline",
+        'next_button': ".pl-2"
     }
-    jina_remove_selectors = '.cta-section, .tech-brief-more, #footer, .header__navbar-inner, .header__navbar-bottom, .open'
-    jina_target_selectors = '.tech-brief-header, .tech-brief-details'
+    jina_remove_selectors = ''
+    jina_target_selectors = '.md\:pr-16'
 
 class ContentExtractor:
     def __init__(self, config: ScraperConfig):
@@ -167,14 +170,50 @@ class TechTransferScraper:
         save_dir.mkdir(parents=True, exist_ok=True)
         
         file_path = save_dir / f'{university}_raw.json'
+        
+        # Load existing results if file exists
+        existing_results = []
+        if file_path.exists():
+            try:
+                with open(file_path, 'r', encoding='utf-8') as f:
+                    existing_results = json.load(f)
+            except json.JSONDecodeError:
+                print(f"Warning: Could not load existing results from {file_path}")
+        
+        # Combine existing and new results, removing duplicates based on page_url
+        seen_urls = {r.get('page_url'): i for i, r in enumerate(existing_results)}
+        for result in results:
+            url = result.get('page_url')
+            if url in seen_urls:
+                # Update existing entry
+                existing_results[seen_urls[url]] = result
+            else:
+                # Add new entry
+                existing_results.append(result)
+                seen_urls[url] = len(existing_results) - 1
+        
+        # Save combined results
         with open(file_path, 'w', encoding='utf-8') as f:
-            json.dump(results, f, indent=2)
+            json.dump(existing_results, f, indent=2)
 
     async def scrape(self, start_url: str, university: str) -> List[Dict[str, str]]:
         """Main scraping function for tech transfer site."""
         results = []
         page_count = 0
         should_stop = False
+
+        # Load existing results to determine where to resume from
+        save_dir = Path('data/raw')
+        file_path = save_dir / f'{university}_raw.json'
+        processed_urls = set()
+        if file_path.exists():
+            try:
+                with open(file_path, 'r', encoding='utf-8') as f:
+                    existing_results = json.load(f)
+                    processed_urls = {r.get('page_url') for r in existing_results if r.get('page_url')}
+                    print(f"\nFound {len(processed_urls)} already processed URLs")
+            except json.JSONDecodeError:
+                print(f"Warning: Could not load existing results from {file_path}")
 
         print(f"\nStarting scrape of {university} tech transfer site: {start_url}")
         
@@ -183,65 +222,95 @@ class TechTransferScraper:
             page = await browser.new_page()
             await page.goto(start_url)
 
-            while True and not should_stop:
+            while True:
                 page_count += 1
                 print(f"\nProcessing page {page_count}...")
                 
                 items = await page.query_selector_all(self.config.selectors['item_links'])
                 print(f"Found {len(items)} items on current page")
                 
-                # Collect all detail URLs from the current page
+                # Calculate how many more items we can process
+                remaining_slots = self.config.max_results - self.num_results if self.config.max_results > 0 else len(items)
+                if remaining_slots <= 0:
+                    print(f"\nReached maximum result limit of {self.config.max_results}")
+                    await browser.close()
+                    return results
+
+                # Collect URLs up to the remaining slots limit
                 detail_urls = []
-                for item in items:
+                for item in items[:remaining_slots]:
                     detail_url = await item.get_attribute("href")
                     if self.config.relative_links:
                         detail_url = urljoin(page.url, detail_url)
+                    # Skip already processed URLs
+                    if detail_url in processed_urls:
+                        print(f"Skipping already processed URL: {detail_url}")
+                        continue
                     detail_urls.append(detail_url)
 
-                # Process detail pages (parallel or sequential)
-                if self.config.parallel:
-                    # Process detail pages in parallel
-                    num_processes = max(1, multiprocessing.cpu_count() // 2)
-                    with multiprocessing.Pool(num_processes) as pool:
-                        process_func = partial(process_detail_page, config=self.config)
-                        page_results = list(tqdm(
-                            pool.imap(process_func, detail_urls),
-                            total=len(detail_urls),
-                            desc=f"Processing page {page_count} items"
-                        ))
+                if not detail_urls:
+                    print("No new URLs to process on this page")
                 else:
-                    # Process detail pages sequentially
-                    page_results = []
-                    for detail_url in tqdm(detail_urls, desc=f"Processing page {page_count} items"):
-                        if should_stop:
+                    print(f"Processing {len(detail_urls)} new items (max_results limit: {self.config.max_results})")
+
+                    # Process detail pages (parallel or sequential)
+                    if self.config.parallel:
+                        # Process detail pages in parallel using ProcessPoolExecutor
+                        with ProcessPoolExecutor() as executor:
+                            futures = [
+                                executor.submit(process_detail_page, url, self.config)
+                                for url in detail_urls
+                            ]
+                            page_results = []
+                            for f in tqdm(futures, total=len(futures), desc=f"Processing page {page_count} items"):
+                                try:
+                                    result = f.result()
+                                    page_results.append(result)
+                                except Exception as e:
+                                    print(f"Error processing result: {str(e)}")
+                                    continue
+                    else:
+                        # Process detail pages sequentially
+                        page_results = []
+                        for detail_url in tqdm(detail_urls, desc=f"Processing page {page_count} items"):
+                            if should_stop:
+                                break
+                            try:
+                                result = process_detail_page(detail_url, self.config)
+                                page_results.append(result)
+                            except Exception as e:
+                                print(f"Error processing {detail_url}: {str(e)}")
+                                continue
+
+                    # Add results and check stop condition
+                    for result in page_results:
+                        results.append(result)
+                        self.num_results += 1
+                        if self._should_stop_scraping(result.get("ip_number")):
+                            print(f"\nReached stop condition with IP number {result.get('ip_number')}.")
+                            should_stop = True
                             break
-                        extracted_data = await process_detail_page(detail_url, self.config)
-                        page_results.append(extracted_data)
 
-                # Check results and update stop condition
-                for result in page_results:
-                    if self._should_stop_scraping(result.get("ip_number")):
-                        print(f"\nReached stop condition with IP number {result.get('ip_number')}.")
-                        should_stop = True
-                        break
-                    results.append(result)
-                    self.num_results += 1
+                    # Save intermediate results
+                    self._save_results(results, university)
 
-                # Save intermediate results
-                self._save_results(results, university)
-
-                self.num_pages += 1
                 if should_stop:
                     break
 
-                next_button = await page.query_selector(self.config.selectors['next_button'])
-                if next_button:
-                    print("\nMoving to next page...")
-                    await next_button.click()
-                    await page.wait_for_load_state("networkidle")
-                else:
-                    print("\nNo more pages to process")
+                # Check if we've hit the max pages limit
+                if self.config.max_pages > 0 and page_count >= self.config.max_pages:
+                    print(f"\nReached maximum page limit of {self.config.max_pages}")
                     break
+
+                # Try to find and click the next button
+                next_button = await page.query_selector(self.config.selectors['next_button'])
+                if not next_button:
+                    print("\nNo next button found - reached last page")
+                    break
+
+                print("\nNavigating to next page...")
+                await next_button.click()
+                await page.wait_for_load_state('networkidle')
 
             await browser.close()
         
@@ -253,8 +322,13 @@ def main():
     config = ScraperConfig()
     scraper = TechTransferScraper(config)
 
-    all_data = asyncio.run(scraper.scrape(config.start_url, config.university))
-    print(f"Scraped {len(all_data)} items from {config.university} tech transfer site")
+    all_data = []
+    for start_url in config.start_urls:
+        print(f"\nProcessing start URL: {start_url}")
+        data = asyncio.run(scraper.scrape(start_url, config.university))
+        all_data.extend(data)
+    
+    print(f"Scraped {len(all_data)} total items from {config.university} tech transfer site")
 
 if __name__ == "__main__":
     main() 

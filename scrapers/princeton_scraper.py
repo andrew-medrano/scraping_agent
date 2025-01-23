@@ -3,6 +3,13 @@ import json
 import asyncio
 import requests
 import warnings
+
+# Suppress all urllib3 warnings
+warnings.filterwarnings('ignore', category=Warning)
+# Extra specific suppressions just in case
+warnings.filterwarnings('ignore', message='.*OpenSSL.*')
+warnings.filterwarnings('ignore', message='.*urllib3.*')
+
 import multiprocessing
 from pathlib import Path
 from typing import List, Dict, Optional
@@ -17,10 +24,10 @@ from openai import OpenAI
 # Configuration
 @dataclass
 class ScraperConfig:
-    start_url: str = "https://tlo.mit.edu/industry-entrepreneurs/available-technologies" # FILL THIS OUT: This is the start URL for the MIT tech transfer site
-    university: str = "mit" # FILL THIS OUT: This is the name of the university
+    start_url: str = "https://puotl.technologypublisher.com/searchresults.aspx?q=&page=0&sort=datecreated&order=desc" # FILL THIS OUT: This is the start URL for the MIT tech transfer site
+    university: str = "princeton" # FILL THIS OUT: This is the name of the university
     relative_links: bool = True
-    max_pages: int = 20  # 0 means no limit, positive number limits the number of pages to scrape
+    max_pages: int = 40  # 0 means no limit, positive number limits the number of pages to scrape
     max_results: int = 0  # 0 means no limit, positive number limits the number of results to scrape
     debug: bool = False  # Enable verbose debug output
     parallel: bool = True  # Enable parallel processing of detail pages
@@ -29,11 +36,11 @@ class ScraperConfig:
     deepseek_api_key: str = os.getenv('DEEPSEEK_API_KEY')
     deepseek_base_url: str = os.getenv('DEEPSEEK_BASE_URL')
     selectors = {
-        'item_links': ".views-row .arrow-text",
-        'next_button': ".pager__item--next"
+        'item_links': ".row h3 > a",
+        'next_button': "" # not used, there is no button pagination
     }
-    jina_remove_selectors = '.cta-section, .tech-brief-more, #footer, .header__navbar-inner, .header__navbar-bottom, .open'
-    jina_target_selectors = '.tech-brief-header, .tech-brief-details'
+    jina_remove_selectors = ''
+    jina_target_selectors = '#content'
 
 class ContentExtractor:
     def __init__(self, config: ScraperConfig):
@@ -123,10 +130,7 @@ class ContentExtractor:
             }
 
 def process_detail_page(detail_url: str, config: ScraperConfig) -> Dict[str, Optional[str]]:
-    """Process a single detail page and extract its information."""
-    if config.debug:
-        print(f"\nDebug: Processing detail page: {detail_url}")
-        
+    """Process a single detail page and extract its information. Used for parallel processing."""
     extractor = ContentExtractor(config)
     try:
         markdown_content = extractor.get_markdown_content(detail_url)
@@ -170,6 +174,27 @@ class TechTransferScraper:
         with open(file_path, 'w', encoding='utf-8') as f:
             json.dump(results, f, indent=2)
 
+    async def _process_detail_page(self, browser: Browser, detail_url: str) -> Dict[str, Optional[str]]:
+        """Process a single detail page and extract its information."""
+        if self.config.debug:
+            print(f"\nDebug: Processing detail page: {detail_url}")
+            
+        try:
+            markdown_content = self.extractor.get_markdown_content(detail_url)
+            extracted_data = self.extractor.extract_info(markdown_content)
+            extracted_data["page_url"] = detail_url
+            return extracted_data
+        except Exception as e:
+            print(f"\nError processing {detail_url}: {str(e)}")
+            return {
+                "ip_name": "",
+                "ip_number": "",
+                "published_date": "",
+                "ip_description": "",
+                "patents": "",
+                "page_url": detail_url
+            }
+
     async def scrape(self, start_url: str, university: str) -> List[Dict[str, str]]:
         """Main scraping function for tech transfer site."""
         results = []
@@ -181,22 +206,38 @@ class TechTransferScraper:
         async with async_playwright() as p:
             browser = await p.chromium.launch(headless=True)
             page = await browser.new_page()
-            await page.goto(start_url)
 
             while True and not should_stop:
-                page_count += 1
-                print(f"\nProcessing page {page_count}...")
+                # Construct URL for current page
+                current_url = start_url.replace("page=0", f"page={page_count}")
+                print(f"\nProcessing page {page_count}, URL: {current_url}")
+                
+                await page.goto(current_url)
+                await page.wait_for_load_state("networkidle")
                 
                 items = await page.query_selector_all(self.config.selectors['item_links'])
                 print(f"Found {len(items)} items on current page")
                 
+                # If no items found, we've reached the end of pagination
+                if not items:
+                    print("\nNo more items found, ending pagination")
+                    break
+
                 # Collect all detail URLs from the current page
                 detail_urls = []
                 for item in items:
+                    # Check if we've hit the max results before adding more URLs
+                    if self.config.max_results > 0 and len(results) >= self.config.max_results:
+                        should_stop = True
+                        break
+                        
                     detail_url = await item.get_attribute("href")
                     if self.config.relative_links:
                         detail_url = urljoin(page.url, detail_url)
                     detail_urls.append(detail_url)
+
+                if should_stop:
+                    break
 
                 # Process detail pages (parallel or sequential)
                 if self.config.parallel:
@@ -209,39 +250,30 @@ class TechTransferScraper:
                             total=len(detail_urls),
                             desc=f"Processing page {page_count} items"
                         ))
+                        # Add the results to our main results list
+                        results.extend(page_results)
+                        self.num_results += len(page_results)
                 else:
                     # Process detail pages sequentially
                     page_results = []
-                    for detail_url in tqdm(detail_urls, desc=f"Processing page {page_count} items"):
-                        if should_stop:
-                            break
-                        extracted_data = await process_detail_page(detail_url, self.config)
+                    remaining_slots = self.config.max_results - len(results) if self.config.max_results > 0 else len(detail_urls)
+                    urls_to_process = detail_urls[:remaining_slots]  # Only process up to remaining slots
+                    
+                    for detail_url in tqdm(urls_to_process, desc=f"Processing page {page_count} items"):
+                        extracted_data = await self._process_detail_page(browser, detail_url)
                         page_results.append(extracted_data)
-
-                # Check results and update stop condition
-                for result in page_results:
-                    if self._should_stop_scraping(result.get("ip_number")):
-                        print(f"\nReached stop condition with IP number {result.get('ip_number')}.")
-                        should_stop = True
-                        break
-                    results.append(result)
-                    self.num_results += 1
+                        results.append(extracted_data)
+                        self.num_results += 1
 
                 # Save intermediate results
                 self._save_results(results, university)
 
                 self.num_pages += 1
-                if should_stop:
+                if len(results) >= self.config.max_results and self.config.max_results > 0:
+                    print(f"\nReached maximum result limit of {self.config.max_results}")
                     break
 
-                next_button = await page.query_selector(self.config.selectors['next_button'])
-                if next_button:
-                    print("\nMoving to next page...")
-                    await next_button.click()
-                    await page.wait_for_load_state("networkidle")
-                else:
-                    print("\nNo more pages to process")
-                    break
+                page_count += 1
 
             await browser.close()
         
