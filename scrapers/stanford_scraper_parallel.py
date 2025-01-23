@@ -2,11 +2,18 @@ import os
 import json
 import asyncio
 import requests
+import warnings
+import multiprocessing
 from pathlib import Path
 from typing import List, Dict, Optional
 from dataclasses import dataclass
 from urllib.parse import urljoin
 from tqdm import tqdm
+from functools import partial
+
+# Suppress the specific urllib3 NotOpenSSLWarning
+import urllib3
+warnings.filterwarnings('ignore', category=urllib3.exceptions.NotOpenSSLWarning)
 
 from playwright.async_api import async_playwright, Page, Browser
 from openai import OpenAI
@@ -14,16 +21,16 @@ from openai import OpenAI
 # Configuration
 @dataclass
 class ScraperConfig:
-    relative_links: bool = True # FILL THIS OUT: True if the links are relative, False if they are absolute
+    relative_links: bool = True
     jina_api_url: str = 'https://r.jina.ai/'
     jina_api_key: str = os.getenv('JINA_API_KEY')
     deepseek_api_key: str = os.getenv('DEEPSEEK_API_KEY')
     deepseek_base_url: str = os.getenv('DEEPSEEK_BASE_URL')
     selectors = {
-        'item_links': ".view__item .teaser__title > a",      # FILL THIS OUT: This is the selector for the items on the page
-        'next_button': ".pager__item--next > .pager__link"   # FILL THIS OUT: This is the selector for the next button on the page
+        'item_links': ".view__item .teaser__title > a",
+        'next_button': ".pager__item--next > .pager__link"
     }
-    jina_remove_selectors = '.node__sidebar, #similar-technologies, #footer, .su-masthead, .su-global-footer' # FILL THIS OUT: This is the selector for the elements to remove from the page
+    jina_remove_selectors = '.node__sidebar, #similar-technologies, #footer, .su-masthead, .su-global-footer'
 
 class ContentExtractor:
     def __init__(self, config: ScraperConfig):
@@ -33,7 +40,7 @@ class ContentExtractor:
             base_url=config.deepseek_base_url
         )
 
-    async def get_markdown_content(self, url: str) -> str:
+    def get_markdown_content(self, url: str) -> str:
         """Converts webpage content to markdown using Jina API."""
         url = f"{self.config.jina_api_url}{url}"
         headers = {
@@ -44,7 +51,7 @@ class ContentExtractor:
         response = requests.get(url, headers=headers)
         return response.text
 
-    async def extract_info(self, markdown_content: str) -> Dict[str, str]:
+    def extract_info(self, markdown_content: str) -> Dict[str, str]:
         """Extracts structured information from markdown content using LLM."""
         system_prompt = """
         You are a data extraction assistant.
@@ -94,33 +101,38 @@ class ContentExtractor:
                 "patents": ""
             }
 
+def process_detail_page(detail_url: str, config: ScraperConfig) -> Dict[str, Optional[str]]:
+    """Process a single detail page and extract its information."""
+    extractor = ContentExtractor(config)
+    try:
+        markdown_content = extractor.get_markdown_content(detail_url)
+        extracted_data = extractor.extract_info(markdown_content)
+        extracted_data["page_url"] = detail_url
+        return extracted_data
+    except Exception as e:
+        print(f"\nError processing {detail_url}: {str(e)}")
+        return {
+            "ip_name": "",
+            "ip_number": "",
+            "published_date": "",
+            "ip_description": "",
+            "patents": "",
+            "page_url": detail_url
+        }
+
 class TechTransferScraper:
     def __init__(self, config: ScraperConfig):
         self.config = config
-        self.extractor = ContentExtractor(config)
 
     def _should_stop_scraping(self, ip_number: str) -> bool:
         """Check if we should stop scraping based on IP number."""
         if not ip_number or not ip_number.startswith('S'):
             return False
         try:
-            # Extract the number after 'S'
             num = int(ip_number[1:])
             return num <= 17
         except ValueError:
             return False
-
-    async def _process_detail_page(self, browser: Browser, detail_url: str) -> Dict[str, Optional[str]]:
-        """Process a single detail page and extract its information."""
-        detail_page = await browser.new_page()
-        await detail_page.goto(detail_url)
-        
-        markdown_content = await self.extractor.get_markdown_content(detail_url)
-        extracted_data = await self.extractor.extract_info(markdown_content)
-        extracted_data["page_url"] = detail_url
-        
-        await detail_page.close()
-        return extracted_data
 
     def _save_results(self, results: List[Dict[str, str]], university: str) -> None:
         """Saves scraped results to a JSON file."""
@@ -151,25 +163,34 @@ class TechTransferScraper:
                 items = await page.query_selector_all(self.config.selectors['item_links'])
                 print(f"Found {len(items)} items on current page")
                 
-                for item in tqdm(items, desc=f"Page {page_count} items"):
-                    if should_stop:
-                        break
-                        
+                # Collect all detail URLs from the current page
+                detail_urls = []
+                for item in items:
                     detail_url = await item.get_attribute("href")
                     if self.config.relative_links:
                         detail_url = urljoin(page.url, detail_url)
-                    print(f"\nProcessing item: {detail_url}")
+                    detail_urls.append(detail_url)
 
-                    extracted_data = await self._process_detail_page(browser, detail_url)
-                    
-                    # Check if we should stop based on IP number
-                    if self._should_stop_scraping(extracted_data.get("ip_number")):
-                        print(f"\nFound IP number {extracted_data['ip_number']} <= S17. Stopping scrape.")
+                # Process detail pages in parallel
+                num_processes = max(1, multiprocessing.cpu_count() // 2)
+                with multiprocessing.Pool(num_processes) as pool:
+                    process_func = partial(process_detail_page, config=self.config)
+                    page_results = list(tqdm(
+                        pool.imap(process_func, detail_urls),
+                        total=len(detail_urls),
+                        desc=f"Processing page {page_count} items"
+                    ))
+
+                # Check results and update stop condition
+                for result in page_results:
+                    if self._should_stop_scraping(result.get("ip_number")):
+                        print(f"\nFound IP number {result['ip_number']} <= S17. Stopping scrape.")
                         should_stop = True
                         break
-                        
-                    results.append(extracted_data)
-                    self._save_results(results, university)
+                    results.append(result)
+
+                # Save intermediate results
+                self._save_results(results, university)
 
                 if should_stop:
                     break
