@@ -99,7 +99,7 @@ class TechTransferScraper:
         self.config = config
         self.extractor = ContentExtractor(config)
 
-    def _should_stop_scraping(self, ip_number: str) -> bool:
+    def _should_stop_scraping(self, ip_number: str) -> bool:  # FILL THIS OUT: This is the function that checks if we should stop scraping based on the IP number
         """Check if we should stop scraping based on IP number."""
         if not ip_number or not ip_number.startswith('S'):
             return False
