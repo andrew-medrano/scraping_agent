@@ -1,0 +1,18 @@
+[
+  {
+    "ip_name": "Methods And Design Of Optical Neural Network",
+    "ip_number": "#18794",
+    "published_date": "",
+    "ip_description": "An optical neural network is constructed based on photonic integrated circuits to perform neuromorphic computing. In the optical neural network, matrix multiplication is implemented using one or more optical interference units, which can apply an arbitrary weighting matrix multiplication to an array of input optical signals. Nonlinear activation is realized by an optical nonlinearity unit, which can be based on nonlinear optical effects, such as saturable absorption. These calculations are implemented optically, thereby resulting in high calculation speeds and low power consumption in the optical neural network.",
+    "patents": "10,268,232, 2,017,273,863, CNZL201780043808.X, 3,465,302, 7,026,057, 10, 10,768,659, 11,334,107, CNZL202111181305.3, CNZL202111182029.2, 602,017,057,014, 3,465,302, 3,465,302, 3,465,302, 11,914,415",
+    "page_url": "https://tlo.mit.edu/industry-entrepreneurs/available-technologies/methods-and-design-optical-neural-network"
+  },
+  {
+    "ip_name": "Drinkable, Tough Hydrogels for Gastrointestinal Applications",
+    "ip_number": "#24642JQ",
+    "published_date": "",
+    "ip_description": "This technology is a method for oral drug delivery involving the administration of pharmaceutically acceptable fluids to a patient in drinkable form. These fluids then partially or fully solidify within 15\u2019 in the stomach to form a slow or sustained drug release article. This drinkable formulation allows for easier oral administration of drugs in a liquid format which transitions to a solid state within the stomach while encapsulating the active agent(s), optimizing drug release over time while providing protection against the harsh environment of the stomach.",
+    "patents": "ingestible in vivo-assembling drug release formulations and methods, Patent Cooperation Treaty | Published application",
+    "page_url": "https://tlo.mit.edu/industry-entrepreneurs/available-technologies/drinkable-tough-hydrogels-gastrointestinal"
+  }
+]
