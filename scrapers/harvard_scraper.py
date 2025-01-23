@@ -19,14 +19,14 @@ from openai import OpenAI
 @dataclass
 class ScraperConfig:
     start_urls: List[str] = field(default_factory=lambda: [
-        "https://otd.harvard.edu/explore-innovation/technologies/results/?q=&category=all"
+        "https://otd.harvard.edu/explore-innovation/technologies/results/?q=&category="
     ])
     university: str = "harvard"  # FILL THIS OUT: This is the name of the university
     relative_links: bool = True
     max_pages: int = 0  # 0 means no limit, positive number limits the number of pages to scrape
-    max_results: int = 3  # 0 means no limit, positive number limits the number of results to scrape
-    debug: bool = True  # Enable verbose debug output
-    parallel: bool = False  # Enable parallel processing of detail pages
+    max_results: int = 0  # 0 means no limit, positive number limits the number of results to scrape
+    debug: bool = False  # Enable verbose debug output
+    parallel: bool = True  # Enable parallel processing of detail pages
     jina_api_url: str = 'https://r.jina.ai/'
     jina_api_key: str = os.getenv('JINA_API_KEY')
     deepseek_api_key: str = os.getenv('DEEPSEEK_API_KEY')
