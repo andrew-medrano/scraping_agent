@@ -22,10 +22,10 @@ from openai import OpenAI
 @dataclass
 class ScraperConfig:
     start_urls: List[str] = field(default_factory=lambda: [
-        "https://otd.harvard.edu/explore-innovation/technologies/results/?q=&category="
+        "https://otc.duke.edu/technologies/"
     ])
-    university: str = "harvard"  # FILL THIS OUT: This is the name of the university
-    relative_links: bool = True
+    university: str = "duke"  # FILL THIS OUT: This is the name of the university
+    relative_links: bool = False
     max_pages: int = 0  # 0 means no limit, positive number limits the number of pages to scrape
     max_results: int = 0  # 0 means no limit, positive number limits the number of results to scrape
     debug: bool = False  # Enable verbose debug output
@@ -35,11 +35,11 @@ class ScraperConfig:
     deepseek_api_key: str = os.getenv('DEEPSEEK_API_KEY')
     deepseek_base_url: str = os.getenv('DEEPSEEK_BASE_URL')
     selectors = {
-        'item_links': ".mb-8 .no-underline",
-        'next_button': ".pl-2"
+        'item_links': ".o-post-cards__card .c-heading--sep a",
+        'next_button': ".next"
     }
-    jina_remove_selectors = ''
-    jina_target_selectors = r'.md\:pr-16'
+    jina_remove_selectors = '#footer'
+    jina_target_selectors = '.o-sidebar-card, .o-content--gutenberg'
 
 class ContentExtractor:
     def __init__(self, config: ScraperConfig):
