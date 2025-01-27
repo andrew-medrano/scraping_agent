@@ -14,7 +14,9 @@ UNIVERSITY_NAMES = {
     'mit': 'Massachusetts Institute of Technology',
     'stanford': 'Stanford University',
     'harvard': 'Harvard University',
-    # Add more universities as needed
+    'princeton': 'Princeton University',
+    'ucla': 'University of California, Los Angeles',
+    'umich': 'University of Michigan'
 }
 
 class TechTransferSummarizer:
