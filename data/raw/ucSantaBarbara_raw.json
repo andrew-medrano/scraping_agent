@@ -1,0 +1,802 @@
+[
+  {
+    "ip_name": "Acquiring Cellular Spatial Information Using Unique Light-Sensitive DNA Barcodes",
+    "ip_number": "33730",
+    "published_date": "08/22/2024",
+    "ip_description": "Researchers at the University of California, Santa Barbara have introduced the concept of single-cell Spatial Transcriptomics and Multiplexed Profiling, or scSTAMP-seq, which captures the transcriptomes of every cell within a field of view at the spatial resolution of individual cells. Cholesterol-tagged UV-sensitive oligonucleotides are incorporated into cell membranes and then spatially-imposed light gradients are applied to optically \u201cstamp\u201d the position of each cell prior to tissue dissociation and single-cell sequencing. scSTAMP-seq is completely modular and can be combined downstream with any single-cell sequencing technology or measurement, enabling rapid multiomic single-cell phenotypic profiling that can access the genetic diversity present in biological systems. This technology could be used to create kits to provide a sensitive and high-throughput mapping of the transcriptome and epigenome at single-cell resolution for applications in both fundamental and clinical research.\n\nAdvantages\n\nEnables high-throughput mapping of the transcriptome and epigenome at single-cell resolution\nWorks on live and fixed cell cultures/tissues\nCan be used in conjunction with other NGS transcriptomic/epigenomic methods, including technologies that do not have single cell resolution and require pre-fixed tissue samples\nLowers costs and simplifies library construction with easy multiplexing\nEasily adaptable to other laboratories\n\nApplications\n\nGenetic research\nCancer biology\nCell and gene therapy",
+    "patents": "Patent Cooperation Treaty Published Application 2024/173380, Additional Patent Pending",
+    "page_url": "https://techtransfer.universityofcalifornia.edu/NCD/33730.html"
+  },
+  {
+    "ip_name": "Efficient Solar Cells Via Sulfur-fused Helical Perylene Diimides Design Concept",
+    "ip_number": "33687 / UC Case 2018-270-0",
+    "published_date": "",
+    "ip_description": "Researchers at the University of California, Santa Barbara have developed a breakthrough in solar cell efficiency and stability through novel sulfur-fused perylene diimides. This series of novel sulfur-fused perylene diimides (PDIs) shows significant promise in improving the fill factor, electron mobility, and overall efficiency of bulk heterojunction solar cells. These new compounds, 2PDI-nS, where n is an integer, have been utilized both as electron acceptors in organic solar cells and as electron transporting layers in perovskite solar cells, demonstrating high device fill factor, low open circuit voltage loss, and improved device efficiency and stability. Moreover, 2PDI-nS as an electron transporting layer in perovskite solar cells led to improved device efficiency and stability. 2PDl-nS can be synthesized in five steps with high overall yield, and the sulfuration reaction can be applied to various POI derivatives. The fused POIs have glassy structure, strong light absorption, high electron mobility and tunable LUMO, can be potentially used as ETL in perovskite solar cells, electron acceptor in organic solar cells and active layer in n-type transistors.",
+    "patents": "United States Of America, Issued Patent, 11,245,077, 02/08/2022, 2018-270",
+    "page_url": "https://techtransfer.universityofcalifornia.edu/NCD/33687.html"
+  },
+  {
+    "ip_name": "Robust Localization and Tracking Using GNSS Location Estimates, Satellite SNR Data, and 3D Maps",
+    "ip_number": "33612 / UC Case 2016-776-0",
+    "published_date": "",
+    "ip_description": "Researchers at the University of California, Santa Barbara have formulated a novel method of using crowdsourced GNSS data to create three-dimensional maps, creating a low-cost alternative to lidar and aerial photography. Furthermore, they have developed a method for using three-dimensional maps in a Bayesian localization and tracking framework to substantially improve GNSS-based localization in built-up environments. The methods developed exploit the blockage of satellite signals to enable 3D mapping and improve localization by using information already available in the GNSS receiver regarding the signal-to-noise-ratio (SNR) corresponding to each satellite it sees. If the line of sight (LoS) path from the receiver to a satellite is blocked (i.e., the receiver is in the shadow of a structure), then the SNR is likely to be small. Conversely, if the LoS path is available, the SNR is likely to be high. This observation forms the basis for a Bayesian estimation and tracking framework for \u201cprobabilistic shadow matching,\u201d which enables both 3D map creation using crowdsourced GNSS measurements, and improved location for an individual GNSS device given a 3D map of the environment. These improved mapping and localization capabilities can be used by a myriad of organizations including telecommunication providers, mapping services, flight simulators, video game companies, and the military.",
+    "patents": "10,656,282",
+    "page_url": "https://techtransfer.universityofcalifornia.edu/NCD/33612.html"
+  },
+  {
+    "ip_name": "Sensing with RF Signals by Exploiting Edge Diffraction",
+    "ip_number": "33592 / UC Case 2024-861-0",
+    "published_date": "",
+    "ip_description": "Researchers at the University of California, Santa Barbara have created a novel method for imaging with Radio Frequency (RF) signals, by exploiting the phenomenon of diffraction. More specifically, the invention uses the interaction of edges of the objects with the incoming waves. In this application, edges are not limited to visibly sharp edges but include any surface whose radius is relatively small. This innovative method images the edges of objects, scenery, or entities, utilizing the interaction between one or more transmitted signals and the edges (or surfaces with small enough curvatures) in the imaging area of interest by exploiting the Geometrical Theory of Diffraction (GTD) and the corresponding Keller cones. The method results in much better imaging results than state of the art.\n\nThis method does not require specialized or expensive equipment to produce high quality images of objects. Further, the method is not machine-learning based, which means it does not rely on collecting RF training data, which is often cumbersome and limited in generalizability to new areas.",
+    "patents": "Patent Pending",
+    "page_url": "https://techtransfer.universityofcalifornia.edu/NCD/33592.html"
+  },
+  {
+    "ip_name": "Low Barrier Height Resurf Structure For Efficient Power Diodes",
+    "ip_number": "33581 / UC Case 2024-855-0",
+    "published_date": "",
+    "ip_description": "Researchers at the University of California, Santa Barbara have designed a trench Schottky barrier diode featuring a high-k dielectric RESURF (reduced surface field) and a low work-function metal contact. By utilizing the trench geometry, the electric field at the metal/semiconductor junction is reduced and pushed deeper into the fin bottom. Incorporating the high-k dielectric enables the deposition of thicker dielectric material, enhancing the breakdown voltage while simultaneously reducing dielectric leakage, all without compromising the impact of RESURF. The decreased electric field at the metal/semiconductor junction allows for the use of a low work-function metal, reducing the turn-on voltage and consequently reducing the forward voltage drop. The high-k trench SBD has the potential to be employed in power converters capable of achieving very high-power efficiency by simultaneously reducing the forward voltage drop and reverse leakage current. The high-k trench SBD offers several key advantages including improved power efficiency, due to a reduction in both the forward voltage drop and reverse leakage current; faster switching, making it a viable alternative to traditional pn junction diodes for high-voltage high frequency switching applications; versatility and efficiency, leading to opportunities for a wide-range of applications; and reduced heat generation.",
+    "patents": "Patent Pending",
+    "page_url": "https://techtransfer.universityofcalifornia.edu/NCD/33581.html"
+  },
+  {
+    "ip_name": "Sn2 Glycosylation Suitable For Automated Glycan Synthesis",
+    "ip_number": "33541 / UC Case 2024-840-0",
+    "published_date": "",
+    "ip_description": "Researchers at the University of California, Santa Barbara have developed a novel directing group on leaving group strategy to achieve SN2 glyclosylation. This innovative approach uses an extremely mild, cheap, functional group\u00adcompatible stoichiometric activation strategy and features high levels of stereoselectivity, high reaction efficiency, and general applicability. The reaction time typically ranges from 30 minutes to 1 hour, which is ideal for automated synthesis. This approach is particularly effective in the construction of challenging 1,2-cis\u00adglycosidic linkages and has the potential to greatly facilitate automated carbohydrate synthesis.",
+    "patents": "Patent Pending",
+    "page_url": "https://techtransfer.universityofcalifornia.edu/NCD/33541.html"
+  },
+  {
+    "ip_name": "Compact Module for Complementary-Channel Terahertz Pulse Slicing",
+    "ip_number": "33515 / UC Case 2024-858-0",
+    "published_date": "",
+    "ip_description": "Researchers at the University of California, Santa Barbara have designed a quasi-optical modular pulse slicer designed for use at terahertz frequencies. It consists of identical modules with two inputs and two outputs, allowing stacking of modules combining two outputs of each module with two inputs of the next module. The pulse slicer is capable of flexible pulse durations (>1 ns) with customizable start and stop timings over a broad range of frequencies (>150 GHz). The design incorporates a laser-driven silicon switch at Brewster's angle to incoming terahertz radiation to limit undesired reflections in the \"off\" state and ensure that terahertz power is only transmitted when the switch is \"on\". Further, an \"off\" switch ensures that no power is leaked after the pulse and that the switching profile is sharp. The slicer's small footprint (48x72x162 mm) and small insertion loss (1.2 dB at 320 GHz) as well as high switching efficiency (>65%) allows pulse slicers to be stacked to create complex pulse sequences. An additional feature of the pulse slicer is splitting of the laser pulses generating pulses 2, 3, etc. and directing a part of the radiation to the preceding switches maintaining a high reflection in the on state thus overcoming limitations imposed on times between pulses due to the carrier\u2019s relaxation in the switch material. This design will enable more complex kW-power pulse sequences than existing pulse slicers for free electron laser or gyrotron-powered pulsed ESR and has potential applications for pulsed DNP.",
+    "patents": "Patent Pending",
+    "page_url": "https://techtransfer.universityofcalifornia.edu/NCD/33515.html"
+  },
+  {
+    "ip_name": "Methods of Treating Lymphoma with a Phagocyte Having a Chimeric Antigen Receptor",
+    "ip_number": "33429 / UC Case 2022-773-0",
+    "published_date": "12/12/2024",
+    "ip_description": "Researchers at the University of California, Santa Barbara have invented a novel approach for treating lymphoma in an individual by targeting engineered phagocytes to lymphoma cells. In particular, the phagocytes provided for administration to an individual, who has lymphoma, are engineered to express a chimeric antigen receptor (CAR) that specifically binds to an antigen present on lymphoma cells. The CAR localizes the engineered phagocytes to sites where lymphoma cells are present. In some embodiments, phagocytic activity of the phagocytes is enhanced by further engineering the phagocytes to express a hyperactive Rac GTPase. \n\nAdvantages\n\nIncreases treatment efficiency\nIncreases patient survivability\n\nApplications\n\nCancer Treatment \nPharmaceuticals \nTherapeutics",
+    "patents": "20240408204",
+    "page_url": "https://techtransfer.universityofcalifornia.edu/NCD/33429.html"
+  },
+  {
+    "ip_name": "Compositions, Systems, and Methods for Stereoselective Decarboxylative Radical Cyclization",
+    "ip_number": "33417 / UC Case 2024-843-0",
+    "published_date": "",
+    "ip_description": "Researchers at the University of California, Santa Barbara have used the fundamental principles of mechanistic organic chemistry, to repurpose fatty acid photodecarboxylases (FAPs), the most recently discovered member of natural photoenzymes, to catalyze photoredox radical C\u2013C bond formation not previously encountered in nature. Through enzyme mining and engineering, the team has developed a collection of radical photocyclases (RAPs) to facilitate decarboxylative radical cyclization with excellent levels of chemo-, enantio-, and diastereoselectivities. A high-throughput experimental workflow allowed the directed evolution of FAPs to furnish an orthogonal set of radical photocyclases capable of accessing all four stereoisomers of stereochemical dyads in a diastereo- and enantiodivergent fashion. Such fully stereodivergent processes are unprecedented in asymmetric radical biocatalysis. Together, the development of stereoselective RAPs significantly expanded the catalytic repertoire of natural photoenzymes, affording powerful tools to tame the stereochemistry of free radical-mediated reactions.",
+    "patents": "Patent Pending",
+    "page_url": "https://techtransfer.universityofcalifornia.edu/NCD/33417.html"
+  },
+  {
+    "ip_name": "Systems, Compositions And Methods Of Metalloprotein-Catalyzed Fluorination, Azidation, Thiocyanation and Hydroxylation",
+    "ip_number": "33416 / UC Case 2024-841-0",
+    "published_date": "",
+    "ip_description": "Researchers at the University of California, Santa Barbara have repurposed and evolved nonheme iron (Fe) enzymes to promote new-to-nature C-H fluorination reactions with excellent efficiency. These evolved Fe enzymes represent the first synthetic fluorinases capable of catalyzing the formation of C-F bonds. The newly engineered Fe-dependent fluorinases complement the naturally occurring fluorinase activity found only in bacteria and archaea by exploiting an underutilized radical mechanism for enzymatic C-F bond formation. The directed evolution of nonheme Fe enzymes affords valuable tools for the biocatalytic synthesis of organofluorine compounds via a C-H functionalization logic. Further development and optimization of this technology has the potential to be applied in the biocatalytic synthesis of fluorine-containing drug small molecules or their intermediates.",
+    "patents": "Patent Pending",
+    "page_url": "https://techtransfer.universityofcalifornia.edu/NCD/33416.html"
+  },
+  {
+    "ip_name": "Enzyme-Controlled Stereoselective Radical Cyclisation to Arenes Enabled by Metalloredox Biocatalysis",
+    "ip_number": "33415 / UC Case 2023-854-0",
+    "published_date": "06/27/2024",
+    "ip_description": "Researchers at the University of California, Santa Barbara have developed a novel metalloredox biocatalysis strategy that introduces high levels of stereocontrol over free radical-mediated transformations, allowing access to useful chiral compounds that were not previously available via other catalytic means. The researchers utilized directed evolution of natural cytochromes P450 to generate enzymes able to catalyze asymmetric radical cyclisation to arenes through a nonnatural electron transfer mechanism. The engineered P450s can give rise to either antipode of the product with excellent total turnover numbers (up to 12,000). Another engineered radical cyclase, P450arc3, permitted efficient kinetic resolution of racemic chloride substrates (S factor = 18). Furthermore, a proton-coupled electron transfer (PCET) mechanism for the radical-polar crossover step suggests the potential of haem carboxylate as a base catalyst. Collectively, these emerging new-to-nature activation modes provide an exciting opportunity to evolve enzymes capable of imposing excellent stereocontrol over fleeting free radical intermediates, an objective that has long eluded small-molecule catalysis due to the inherent difficulties to induce asymmetry with free radical chemistry.\n\nAdvantages\n\nEnables access to useful chiral compounds that were previously unavailable or difficult to synthesize\nExcellent stereocontrol over fleeting free radical intermediates\nProvides green chemistry alternative to conventional manufacturing\nMore efficient than traditional methods\n\nApplications\n\nBiochemistry \nPharmaceuticals\nEnergy\nAgriculture",
+    "patents": "WO 2024/138228, Additional Patent Pending",
+    "page_url": "https://techtransfer.universityofcalifornia.edu/NCD/33415.html"
+  },
+  {
+    "ip_name": "Compositions, Systems, and Methods for Stereoselective Synthesis of Non-Canonical Amino Acids",
+    "ip_number": "33414 / UC Case 2023-880-0",
+    "published_date": "07/11/2024",
+    "ip_description": "Researchers at the University of California, Santa Barbara (UCSB) have enabled highly stereoselective synthesis of diverse and valuable non-canonical amino acids by synergistically combining engineering photoredox and pyridoxal phosphate enzymes to create a biologically and chemically novel activation mode. The non-canonical amino acids produced by this novel methodology include those bearing challenging stereochemical dyads and triads, prepared in a convergent and protecting-group-free fashion with excellent diastereo- and enantiocontrol. Notably, the a-stereochemistry of the non-canonical amino acids can be edited, giving rise to either the natural L-amino acids or the unnatural D-amino acids with excellent enantioselectivity. The combined enzyme engineering and synergetic photoredox and pyridoxal radical biocatalysis created by the UCSB researchers represents a powerful platform to discover new catalytic reactions and to tame free radical intermediates for asymmetric catalysis.",
+    "patents": "WO 2024/148312, Additional Patent Pending",
+    "page_url": "https://techtransfer.universityofcalifornia.edu/NCD/33414.html"
+  },
+  {
+    "ip_name": "Salt-Rejecting Continuous Passive Solar Thermal Desalination Via Thin-Film Condensation",
+    "ip_number": "33308 / UC Case 2023-889-0",
+    "published_date": "",
+    "ip_description": "Researchers at the University of California, Santa Barbara, have pioneered a salt-rejecting passive solar desalinator that offers continuous desalination and salt rejection with industry-leading efficiency in realistic conditions. At the core of this technology is the solar absorber-emitter, a component that converts light from the solar spectrum, which goes mostly unabsorbed by water, to the infrared spectrum, which water mostly absorbs. By flowing saltwater on a radiative-absorbing, porous, hydrophobic evaporator membrane, salt continuously diffuses away from the membrane while heated water vapor condenses on a cooler microporous membrane below. This design leverages thin-film condensation to enhance condensation heat transfer. By condensing within the microporous membrane instead of forming droplets, the distance between the condenser and evaporator membranes is minimized, significantly reducing the vapor transport resistance and achieving a solar-to-water efficiency of 32.9% under one-sun illumination. This desalinator demonstrated a record-high continuous desalination and salt rejection test duration of 7 days. This invention is a seminal advancement in the field of passive solar desalination and signals a promising and sustainable future for freshwater production.",
+    "patents": "Patent Pending",
+    "page_url": "https://techtransfer.universityofcalifornia.edu/NCD/33308.html"
+  },
+  {
+    "ip_name": "On-Chip Microfluidic Dilution Refrigerator for Quantum Devices",
+    "ip_number": "33271 / UC Case 2023-871-0",
+    "published_date": "",
+    "ip_description": "Researchers at the University of California, Santa Barbara, have developed a concept for an on-chip microfluidic dilution refrigerator (MDR) that can efficiently cool quantum components \u2014 a critical advancement toward fully integrated quantum processors and sensors. The invention features a microfluidic system comprising a mixing chamber wherein helium 3 dissolves in helium 4 to form a mixture that absorbs heat, thereby cooling a device in thermal contact with the mixing chamber. A pumping system circulates the helium 3 that is evaporated from the mixture to a heat exchanger via a microfluidic channel, then diverts the helium 3 back to the mixing chamber. Fully integrated quantum systems, with their far lower size and cooling power requirements, are the most viable path toward commercial applications of quantum technology. The success of these processors will rely on their cooling systems, and this technology could provide a compact, low-power, and affordable cryogenic cooler.",
+    "patents": "WO2024129565",
+    "page_url": "https://techtransfer.universityofcalifornia.edu/NCD/33271.html"
+  },
+  {
+    "ip_name": "Double Emulsion Droplets as Osmotic Pressure Sensors in Soft Materials and in Living Biological Cells and Tissues",
+    "ip_number": "33249 / UC Case 2023-868-0",
+    "published_date": "",
+    "ip_description": "Researchers at the University of California, Santa Barbara, have developed a technology that non-invasively measures osmotic pressure in situ and in vivo within 3D living cells and tissues. The key to the invention is double emulsion droplets (generated using microfluidics) composed of an aqueous core with calibrated osmolarity surrounded by an oil layer. The oil layer acts as a semi-permeable membrane that enables the exclusive transport of water molecules. When the osmolarity between the aqueous core and the surrounding environment is different, water molecules exit or enter the core through the oil layer resulting in changes to the droplet volume, which provides a direct readout of osmotic pressure in the living system. The droplets are inserted using fine glass capillaries. The osmotic pressure measurement is precisely localized at the droplet, allowing for direct, absolute measurements of osmotic pressure in living cells and the extracellular spaces of living tissues.\n\nAdvantages\n\nNon-invasive measurements of osmotic pressure in situ and in vivo within 3D living cells and tissues\nDirect, spatially-localized and time-dependent measurement of osmotic pressure\n\nApplications\n\nBiotech               o Skincare\n               o Diagnostics\n\nPharmaceuticals               o Drug delivery",
+    "patents": "WO 2024/107547",
+    "page_url": "https://techtransfer.universityofcalifornia.edu/NCD/33249.html"
+  },
+  {
+    "ip_name": "MR-Based Electrical Property Reconstruction Using Physics-Informed Neural Networks",
+    "ip_number": "33248 / UC Case 2023-860-0",
+    "published_date": "10/23/2022",
+    "ip_description": "Researchers at the University of California, Santa Barbara, have created a physics-informed deep learning framework that can accurately reconstruct EP at an arbitrarily high spatial resolution from incomplete, noisy MR measurements. This invention applies Fourier neural network algorithms constrained by the Helmholtz equation to effectively de-noise magnetic field measurements. Two separate Fourier neural networks efficiently estimate the magnetic field and EP at any location. This technology marks the first time that EP and magnetic field values can be reconstructed simultaneously from incomplete noisy measurements, indicating further potential to improve other MR-based reconstruction methods, such as Helmholtz-EPT and convection-reaction EPT. Greater success in generating these EP maps translates to better diagnostic/prognostic tools and better-informed treatment options.",
+    "patents": "WO 2024/081966",
+    "page_url": "https://techtransfer.universityofcalifornia.edu/NCD/33248.html"
+  },
+  {
+    "ip_name": "Efficient and Selective Upcycling of Polyethylene to Alkylbenzenes under Moderate Hydrogen Pressure",
+    "ip_number": "33229 / UC Case 2023-99M-0",
+    "published_date": "",
+    "ip_description": "Researchers at the University of California, Santa Barbara have developed a polyethylene upcycling technique that offers high yields of valuable alkylbenzene compounds at accelerated reaction times under moderate hydrogen pressure. The use of moderate hydrogen pressure (which can itself be recycled, since very little is consumed in the process) in combination with a bifunctional catalyst with strong acidity enhances the selectivity of alkylbenzenes relative to polyaromatic compounds (which are environmental pollutants) resulting from the catalytic depolymerization of the plastic waste. This technology could make polyethylene recycling more cost-effective and efficient, signaling a commercially viable and sustainable solution to the formidable problem of plastic waste.",
+    "patents": "Patent Pending",
+    "page_url": "https://techtransfer.universityofcalifornia.edu/NCD/33229.html"
+  },
+  {
+    "ip_name": "Mind Reader: Reconstructing Complex Images From Brain Activities",
+    "ip_number": "33164 / UC Case 2023-866-0",
+    "published_date": "04/07/2023",
+    "ip_description": "Researchers at the University of California, Santa Barbara have created a novel technology that reconstructs complex image stimuli from fMRI signals. This method constructs photo-realistic images observed by subjects from their brain signals. Unlike previous works that reconstructed images of single objects or simple shapes, this technology reconstructs image stimuli that are rich in semantics, closer to everyday scenes, and reveal more perspectives. With more objects and relationships presented in these images, an additional text modality is used to better capture the semantics. To achieve high performance with limited data, a pre-trained semantic space aligns the visual and text modalities. fMRI signals are encoded to this visual-language latent space before a generative model conditioned on the mapped embeddings reconstructs the image. Additional contrastive loss is introduced to add low-level visual features into this semantic-based pipeline. As a result, the reconstructed images are both photo-realistic and can faithfully reflect the original image content. This brain signal to image decoding pipeline opens new opportunities to study human brain functions through strategic input alterations and can even potentially be helpful for human-brain interfaces.",
+    "patents": "Patent Pending",
+    "page_url": "https://techtransfer.universityofcalifornia.edu/NCD/33164.html"
+  },
+  {
+    "ip_name": "Ultraviolet Laser Diode on Nano-Porous AlGaN template",
+    "ip_number": "33108 / UC Case 2023-870-0",
+    "published_date": "",
+    "ip_description": "Researchers at the University of California, Santa Barbara have overcome the pain points in constructing efficient ultraviolet laser diodes (UVA LDs) by using a separate confinement structure (SCH or waveguide layer) formed on a nano-porous n-AlGaN layer as the cladding layer. Nano-porous AlGaN has a much lower refractive index than that of a non-porous AlGaN layer with the same Al composition of the AlGaN. This consequently removes the condition to grow thick cladding layers with high Al composition. Instead, similar optical confinement can be achieved with thinner, lower-Al-content layers that can be easily formed on GaN substrates without cracking defects. In addition, the Al composition of the nano-porous n-AlGaN cladding layer is lower than that of conventional structure, which minimizes strain that would otherwise cause cracking defects and also minimizes the generation of new dislocation defects at the interface between the LD structure and nano-porous n-AlGaN cladding. This technology provides a superior structure and technique to fabricate UVA LDs on GaN substrates with dislocation densities of less than 1x106 cm-2 and a lifetime of over 10,000 hours.",
+    "patents": "WO2024155335",
+    "page_url": "https://techtransfer.universityofcalifornia.edu/NCD/33108.html"
+  },
+  {
+    "ip_name": "III-Nitride-Based Vertical Cavity Surface Emitting Laser (VCSEL) with a Dielectric P-Side Lens",
+    "ip_number": "33105 / UC Case 2023-847-0",
+    "published_date": "",
+    "ip_description": "Gallium nitride (GaN) vertical cavity surface emitting lasers (VCSELs) have attracted attention with their ability to emit in visible and ultraviolet (UV) wavelengths, affording a wide swath of exciting new applications in displays, solid-state lighting, sensing, and communications. Visible light communications (VLC) is a particularly attractive application for GaN VCSELs where they can be coupled with a phosphor to act as both a light source and data transmission device simultaneously. With the extensive proliferation of devices that can access networks, efficient data transmission has become a high priority, especially as bandwidths are becoming overcrowded. Realizing data transmission at visible wavelengths would greatly expand current bandwidth capabilities, but achieving this task will require solutions to the device degradation caused during lens growth and absorption loss within the long cavities of GaN VCSELs. Researchers at the University of California, Santa Barbara have produced a GaN VCSEL that achieves high efficiency, high peak power, and long device lifetimes by eliminating degradation to the active region, improving emission intensity, and significantly reducing absorption loss within the cavity. Key to the invention is the topside dielectric p-side lens which provides the mode control characteristics. Topside fabrication eases pain points with processing and alignment in addition to putting more distance between the active region and the planar DBR. The topside lens allows for the active region to be farther up in the cavity, increasing the maximum width of the beam and current aperture. The use of wider apertures enables higher packing densities, positioning this VCSEL design especially well for high-power directional lighting applications or other applications where an array of VCSELs with a wide divergence angle is of interest.",
+    "patents": "WO 2024/044567",
+    "page_url": "https://techtransfer.universityofcalifornia.edu/NCD/33105.html"
+  },
+  {
+    "ip_name": "Novel Multilayer Structure for High-Efficiency UV and Far-UV Light-Emitting Devices",
+    "ip_number": "33104 / UC Case 2022-794-0",
+    "published_date": "11/16/2023",
+    "ip_description": "Researchers at the University of California, Santa Barbara have introduced a design for ultraviolet (UV) or far-UV LEDs that incorporates a novel doped multilayer structure that dramatically improves the performance of these devices. The novel multilayer structure combines regions of higher Al composition (compared to adjacent layers) with an undulating emitting region and controlled buffer layer crystal quality to promote radiative recombination and enhance efficiency. Compared to nitride UV LEDs without the novel multilayer structure, this technology demonstrates an approximate 300% improvement in output power and the surface morphology of the active region is extremely smooth by comparison. This plays an important role in upgrading light emission efficiency due to electron and hole localization from the disc-hillocks, and extremely smooth surfaces on top of the disc-hillocks enable sharp quantum well heterostructures which increase carrier localization further. \n\nAdvantages\n\n\n300% improvement in output power\nHigher efficiency\nImproved reliability and lifetime\nHigher uniformity across growth wafers and enhanced surface morphology of active regions\n\nApplications\n\n\nLEDs\n\nUV and far-UV LEDs",
+    "patents": "20230369538",
+    "page_url": "https://techtransfer.universityofcalifornia.edu/NCD/33104.html"
+  },
+  {
+    "ip_name": "High-Efficiency and High-Power III-Nitride Devices Grown on or Above a Strain Relaxed Template",
+    "ip_number": "33099",
+    "published_date": "08/10/2023",
+    "ip_description": "Researchers at the University of California, Santa Barbara have achieved high efficiency and high power emission in green emitters while growing the devices on or above a strain-relaxed template (SRT). The SRT uses a thin thermally decomposed InGaN underlayer (DL) below an n-type GaN or low indium composition InGaN decomposition stop layer (DSL), on top of which is grown a buffer layer comprising an n-type InGaN/GaN superlattice (SL). For an LD structure, an n-type InGaN waveguiding layer is then grown, followed by an active region, p-type electron blocking layer (EBL), p-type InGaN waveguide and p-type GaN or p-type InGaN layers. For an LED structure, the n-type, p-type or both InGaN waveguiding layers may be omitted. This technology improves the layer structure and growth conditions for green InGaN emitters, resulting in higher power output and higher efficiency.",
+    "patents": "WO 2023/150550",
+    "page_url": "https://techtransfer.universityofcalifornia.edu/NCD/33099.html"
+  },
+  {
+    "ip_name": "Ultra-Compact Non-Volatile Memory Technology with Embedded RRAM",
+    "ip_number": "32924",
+    "published_date": "04/20/2023",
+    "ip_description": "Researchers at the University of California, Santa Barbara have developed an ultra-compact resistive-random-access-memory (RRAM) cell with industry-leading switching speed (<10ns), low access latency, and low energy consumption. This nonvolatile and manufacture-friendly memory technology combines a transition-metal-dichalcogenide (TMDC) graphene-based heterojunction field-effect-transistor with hexagonal boron nitride (h-BN) based RRAM to form a single device. The hybrid structure, which can be considered as a \u201c0.5T0.5R\u201d memory cell, reduces the device count by half and is the first of its kind in RRAM technology history. Its design affords lower operation voltage, extraordinarily fast switching speed, long retention time, high ON/OFF ratio, high endurance, and low switching energy in contrast to ubiquitous charge- and silicon-based memory. This invention stores much more information with higher performance compared to conventional alternatives and can serve as the foundation for a new generation of intelligent chips, changing the ways we process and store information.",
+    "patents": "20230124085",
+    "page_url": "https://techtransfer.universityofcalifornia.edu/NCD/32924.html"
+  },
+  {
+    "ip_name": "",
+    "ip_number": "",
+    "published_date": "",
+    "ip_description": "",
+    "patents": "",
+    "page_url": "https://techtransfer.universityofcalifornia.edu/NCD/32888.html"
+  },
+  {
+    "ip_name": "Self-Aligned Deposition via Spin Coating without Pretreatment",
+    "ip_number": "32877",
+    "published_date": "08/29/2023",
+    "ip_description": "Researchers at the University of California, Santa Barbara have developed a spin dewetting technique that achieves the selective deposition of spontaneously-formed polymeric coatings on heterogeneous substrates without substrate pre-treatment or post treatment. This novel approach is enabled by spin coating, and selectivity is induced by polymer design that promotes preferential dewetting from one substrate material and uniform wetting on the other. As evidenced by studies with homogeneous surfaces, polyacrylates containing semi-fluorinated pendant groups spontaneously dewet from SiO2 but form continuous films on Cu. When spin coated onto Cu/ SiO2 line\u2013space patterns, these semi-fluorinated polymers selectively coat Cu without any pre- or post-processing. Rational design rules that anticipate regimes of selective deposition have been developed, which connect the droplet size of dewetting structures on homogenous SiO2 with the dimensions of heterogeneous Cu/ SiO2 patterns. The universality of these rules is demonstrated across a library of polymers with varying molecular weight and monomer structure. This technology leverages the simplicity and rapidity of spin coating to reduce the entire patterning process to one step that is complete in under one minute. \n\nAdvantages\n\nThin film deposition on imperfect, heterogeneous substrates \nNo substrate pre- or post-treatment required \nSingle step patterning process is complete in less than one minute  \n\nApplications\n\nIntegrated circuits \nPhotonic devices \nSensors \nTailorable adhesion",
+    "patents": "11,738,366",
+    "page_url": "https://techtransfer.universityofcalifornia.edu/NCD/32877.html"
+  },
+  {
+    "ip_name": "",
+    "ip_number": "",
+    "published_date": "",
+    "ip_description": "",
+    "patents": "",
+    "page_url": "https://techtransfer.universityofcalifornia.edu/NCD/32836.html"
+  },
+  {
+    "ip_name": "Self-Anchoring Burrowing Device for Sensor Placement with Low Reaction Force",
+    "ip_number": "32795 / UC Case 2022-790-0",
+    "published_date": "12/21/2023",
+    "ip_description": "Researchers at the University of California, Santa Barbara have developed a self-anchoring, self-deploying soft burrowing robot that uses tip extension to navigate through granular media. The self-anchoring feature eliminates the requirement of external reaction force to burrow, allowing the device to be implemented into small, mobile robots and enabling remote placement of underground sensors with minimal soil disturbance. Inspired by a plant root, which remains stationary relative to its surroundings as its tip grows, the soft burrowing robot consists of a thin-walled tubular body that is initially inverted inside itself and everts when pressurized, passing new material out of the tip. It can also deploy root hairs, branch, swell radially, and retract by pulling back on the tip to reinvert material. Since there is no relative motion of the body with respect to the granular medium, frictional forces along the sides is eliminated and only the normal forces at the tip oppose the robot\u2019s growth. \n\nAdvantages\n\nTip-extension reduces soil disturbance compared to drilling or hammering \nEnables remote sensor placement in various granular media and organic soils with little or no reaction force \nPneumatic tip extension enables robot to burrow faster than alternative mechanisms \nAbility to create hollow conduits for applications such as wire or irrigation line installation  \n\nApplications\n\nAgriculture and Botany \nCivil and Geotechnical Engineering \nSpace Exploration",
+    "patents": "WO 2023/244927, Additional Patent Pending",
+    "page_url": "https://techtransfer.universityofcalifornia.edu/NCD/32795.html"
+  },
+  {
+    "ip_name": "Engineered Metalloenzymes for Stereocontrolled Atom Transfer Radical Addition",
+    "ip_number": "32665 / UC Case 2021-975-0",
+    "published_date": "10/10/2024",
+    "ip_description": "Researchers at the University of California, Santa Barbara have repurposed naturally occurring metalloenzymes to catalyze unnatural radical reactions in a stereocontrolled fashion. Steering the absolute and relative stereochemistry of these free radical processes is notoriously difficult in asymmetric catalysis, however, this technology imposes excellent stereocontrol over the radical addition step and the halogen rebound step, allowing enantio- and diastereodivergent radical catalysis to be easily carried out. These metalloenzymes are fully genetically encoded, highly active at room temperature (up to 20,000 total turnover number), and readily function in bacterial cells and cell-free lysates. This evolvable metalloenzyme platform represents a promising solution to tame fleeting radical intermediates for asymmetric catalysis.",
+    "patents": "20240336943",
+    "page_url": "https://techtransfer.universityofcalifornia.edu/NCD/32665.html"
+  },
+  {
+    "ip_name": "Eliminating Misfit Dislocations with In-Situ Compliant Substrate Formation",
+    "ip_number": "32661 / UC Case 2021-889-0",
+    "published_date": "",
+    "ip_description": "Researchers at the University of California, Santa Barbara have minimized or entirely prevented the formation of misfit dislocations at the interface of the heterostructure of III-V compound-based devices \u2014 even those grown under large lattice mismatch conditions. Unlike traditional methods of growing GaAs on a Si substrate, GaAs is grown on or above a decomposition stop layer of a thin flexible Si layer, where the GaAs is partially relaxed or free relaxed without the formation of misfit dislocations. Thus, both device lifetime and efficiency are improved drastically, with the opportunity to develop novel devices because the heterostructure is grown under a relatively large lattice mismatch condition. This technology enhances the performance and crystal quality of all III-V and II-VI compound-based devices for applications in automobiles, optical integrated circuits (ICs), power grids, computers, robots, smartphones, displays, and more.",
+    "patents": "Patent Pending",
+    "page_url": "https://techtransfer.universityofcalifornia.edu/NCD/32661.html"
+  },
+  {
+    "ip_name": "III-Nitride-Based Devices Grown On Thin Template On Thermally Decomposed Material",
+    "ip_number": "32660 / UC Case 2021-888-0",
+    "published_date": "",
+    "ip_description": "Researchers at the University of California, Santa Barbara have developed highly efficient III-nitride devices with high-quality, long-wavelength active regions. This technology relaxes a large-area buffer layer across an entire substrate in a single growth with no other processing required. A high growth temperature of 870\u00b0C improves Indium incorporation and results in the highest-available crystal quality of InGaN and AlGaN layers; nearly three times higher than current market offerings. This technology has much higher relaxation (85%) across the whole area of the InGaN layer grown on a 2-inch substrate compared to traditionally relaxed regions that are less than 10 \u03bcm2. This simpler cost-effective approach to growing smaller LED and LDs in a single MOCVD step can be applied to any III-nitride devices, such as electronic devices, high frequency devices, HEMTs, FETs, various detectors, and even solar cells.",
+    "patents": "",
+    "page_url": "https://techtransfer.universityofcalifornia.edu/NCD/32660.html"
+  },
+  {
+    "ip_name": "Machine Learning-Based Monte Carlo Denoising",
+    "ip_number": "32590 / UC Case 2015-002-0",
+    "published_date": "",
+    "ip_description": "In 2015, researchers at the University of California, Santa Barbara applied machine learning (ML) to the task of MC noise reduction by outputting basic scene features from the rendering system (such as surface normal, texture information, depth, position, etc.) and feeding them into a learning model. The model is then trained to remove MC noise and produce high-quality images. The architecture of the learning system is flexible, and could involve MLPs, CNNs, transformers, deep networks, or other machine learning models, and the features input from the rendering system could vary as well. The system can be trained in real time during rendering or offline on an existing dataset with few-sample renderings coupled with ground truth. ML-based MC denoising overcomes the \u201clast mile\u201d problem of slow convergence that is fundamental to other approaches and produces high-quality images orders of magnitude faster than previously possible. \n\nAdvantages\n\nFast filtering of rendered images, producing high-quality results orders of magnitude faster than with other techniques\nAvoids costly computation process of additional sample light rays required by conventional MC renderers\nWorks on a wide range of distributed MC effects such as depth-of-field, motion blur, area lighting, glossy reflections, and global illumination\nSimple to integrate into existing Monte Carlo rendering systems\n\nApplications\n\nGraphics rendering\nGaming\nFilm production\nArchitecture\nMarketing/Advertising",
+    "patents": "10,832,091, 10,192,146",
+    "page_url": "https://techtransfer.universityofcalifornia.edu/NCD/32590.html"
+  },
+  {
+    "ip_name": "Load-Modulation Network for High-Efficiency 5G Power Amplifiers",
+    "ip_number": "32586 / UC Case 2021-877-0",
+    "published_date": "11/02/2023",
+    "ip_description": "Researchers at University of California, Santa Barbara have developed a passive outphasing load modulator (POLM) that allows for higher efficiency and linearity of the power amplifier (PA) with a single power amplifier device. This technology switches across a transmission line ring where only one switch is required for each state, enabling low loss and efficient device layout at high frequency. The GaN process\u2019 high linearity and enhanced power handling serve to minimize distortion in transmitting \u2014 all with a relatively simple network, only requiring one PA for an inherently wideband network exceeding 2.5GHz.\n\nAdvantages\n\nOnly requires a single power amplifier\nHigher output power efficiency\nImproved signal quality\nDecreased cost and complexity\n\nApplications\n\n5G cellular networks\nNew radio",
+    "patents": "20230353105",
+    "page_url": "https://techtransfer.universityofcalifornia.edu/NCD/32586.html"
+  },
+  {
+    "ip_name": "Magneto-Optic Modulator",
+    "ip_number": "32583 / UC Case 2020-701-0",
+    "published_date": "",
+    "ip_description": "Researchers at University of California, Santa Barbara have developed a novel integrated optical modulator based on the nonreciprocal phase shift in magneto-optic material. This invention can be efficiently integrated on any integrated optical waveguide including silicon waveguides (e.g., bonding). Unlike semiconductors at RF, magneto-optic materials do not suffer from plasma free carrier absorption, and perform reliably over time. Compared to standard magneto-optic modulators, this invention does not require polarization filters, removing a difficult fabrication step in integrated optics. This technology can be effectively used as a low-loss electro-optic transducer and for sensing. The integration, the broader modulation bandwidth, and the low RF propagation loss can be beneficial to achieve lower power consumption compared to standard electro-optic modulators.",
+    "patents": "United States Of America Published Application 20240329439, Patent Cooperation Treaty Published Application 2023/004112",
+    "page_url": "https://techtransfer.universityofcalifornia.edu/NCD/32583.html"
+  },
+  {
+    "ip_name": "Wafer-Scale Protein Patterning Of Hydrogel Devices",
+    "ip_number": "32575 / UC Case 2022-762-0",
+    "published_date": "05/25/2023",
+    "ip_description": "Researchers at the University of California, Santa Barbara, have addressed the challenge of traditional cell patterning with a photolithography-based approach for scaled-up fabrication of glass chips that can be used to either make hydrogel devices or protein patterns directly on the chips. This approach generates a high quantity of pattern templates that can be used more than six months after fabrication, allowing researchers to source these templates without the requirement of cleanroom infrastructure and expertise in their own labs. The novel process also increases the precision and compatibility polyacrylamide hydrogels. Using this technology, single cell hiPSC-CMs have demonstrably adhered, spread to a high aspect ratio, and actively contracted to the hydrogels.",
+    "patents": "20230158149, 2022-762",
+    "page_url": "https://techtransfer.universityofcalifornia.edu/NCD/32575.html"
+  },
+  {
+    "ip_name": "Molten Salt Chemical Looping Process for Efficient Chlorine Production from HCl",
+    "ip_number": "32493",
+    "published_date": "04/22/2021",
+    "ip_description": "Researchers at the University of California, Santa Barbara have realized continuous production of Cl2 from HCl with a novel three-reactor molten salt chemical looping system. This three-stage process consists of (I) the oxidation of CuCl, (II) the chlorination of Cu2OCl2, and (III) thermal decomposition of CuCl2. The most essential component of this technology is the reactor system comprising three inter-connected bubble lift columns that are placed in a sand bath to provide uniform heating. The system\u2019s low KCl concentration allows for a high space-time yield, as well as relatively low temperature differences between the reactors. Additionally, this technology can be operated with notably low energy consumption. The Cl2 produced can be used to manufacture other commercially valuable products and simultaneously curtail the emissions of waste HCl.",
+    "patents": "WO202174381A1",
+    "page_url": "https://techtransfer.universityofcalifornia.edu/NCD/32493.html"
+  },
+  {
+    "ip_name": "A Robust Human Stem Cell Based System For Anatomically Correct Neural Tube Morphogenesis",
+    "ip_number": "32445 / UC Case 2021-883-0",
+    "published_date": "08/29/2024",
+    "ip_description": "Researchers at the University of California, Santa Barbara have addressed the difficulty of studying human organogenesis by creating a reproducible and scalable approach for studying organogenesis in a dish, which is compatible with live imaging. This is achieved by applying surface micro-patterning to precisely control cell fate in 2D stem cell sheets while allowing for self-organization of tissue shape in 3D. In contrast to animal studies, neural and epidermal human tissues are necessary and sufficient for folding morphogenesis in the absence of mesoderm activity. This technology models neural tube defects by interfering with biological signals that regulate tissue mechanics. The potential applications of this invention reach beyond neural tube defects and can add significant benefits to the study of human organ morphogenesis in health and disease.\n\nAdvantages\n\nSolves the reproducibility challenge of stem-cell cultures by applying surface micro-patterning\nOvercomes limitations of animal studies in human organogenesis\nDoes not require support from other systems to complete the integration of stem cells\nCompatible with live imaging and genetic manipulations\n\nApplications\n\nHuman stem cell modeling\nNeural disease research",
+    "patents": "20240287430",
+    "page_url": "https://techtransfer.universityofcalifornia.edu/NCD/32445.html"
+  },
+  {
+    "ip_name": "New Class Of Taste Receptor In Mammals",
+    "ip_number": "32332",
+    "published_date": "05/02/2024",
+    "ip_description": "Researchers at the University of California, Santa Barbara, have discovered a new class of taste receptor in mice and humans. These taste receptors are activated by variety of chemicals found in foods such as cocoa beans, citrus fruits, green tea, soybeans, artificial sweeteners, etc. One of the advantages of identifying mammalian taste receptors is that they can be expressed in vitro and used to conduct high throughput screens for new classes of modulators to reduce the bitterness of aversive chemicals in food and for artificial sweeteners and other chemicals in foods. This invention has a direct impact on testing and tuning flavors in food additives, orally administered drug or dietary supplements, oral care compositions, and more.",
+    "patents": "United States Of America, Published Application, 20240142474, 05/02/2024, 2021-874",
+    "page_url": "https://techtransfer.universityofcalifornia.edu/NCD/32332.html"
+  },
+  {
+    "ip_name": "Highly Efficient Glycosylation Chemistry that Enables Automatic Carbohydrate Synthesis",
+    "ip_number": "32316 / UC Case 2021-867-0",
+    "published_date": "",
+    "ip_description": "Researchers at the University of California, Santa Barbara have developed an efficient synthesis of carbohydrate molecules using a traceless directing group on the anomeric leaving group. Unlike the current construction of 1,2-cis glycosides that is limited to a specific glycosyl donor, this invention employs a traceless directing group and permits a general application to any glycofuranosyl/glycopyranosyl donor. Automatic synthesis of complex carbohydrate molecules using this approach will have significant commercial potential due to glyco-molecules' critical biological/medical roles in a range of cellular events including combating diseases and viral infections (i.e. COVID-19), and cell-cell recognition. Alternatively, this technology can be developed into marketable glyco-synthesizers by producing more complex and demanding oligosaccharides, similar to the commercial success realized by automatic peptide and nucleic acid synthesis technologies.",
+    "patents": "WO2022165224A1",
+    "page_url": "https://techtransfer.universityofcalifornia.edu/NCD/32316.html"
+  },
+  {
+    "ip_name": "Strategy To Deliver Objects Suspended In Liquid To Hidden Targets",
+    "ip_number": "32306 / UC Case 2021-553-0",
+    "published_date": "09/14/2023",
+    "ip_description": "Researchers at the University of California, Santa Barbara have developed a technique for the autonomous delivery of particles to hidden targets within closed porous media. The strategy occurs orders of magnitude more rapidly than diffusion would and only involves two key steps. First is solute loading, which involves flowing a solution past the porous media, such that the solution includes a solute selected to partition/associate with the hidden targets. Second is particle delivery, where the deliverable objects autonomously migrate against the solute fluxes emitted by the targets, thereby following chemical trails that lead to the target. This technology markedly improves the delivery efficiency and target accessibility of functional fluids and the applications are broad; including oil recovery, drug delivery, and rechargeable films/coatings. Advantages include autonomous particle delivery, improved target accessibility, and drastically improved efficiency compared to diffusion techniques. Applications include oil recovery, drug delivery, and films/coatings.",
+    "patents": "20230285973",
+    "page_url": "https://techtransfer.universityofcalifornia.edu/NCD/32306.html"
+  },
+  {
+    "ip_name": "Nitride Based Ultraviolet LED with an Ultraviolet Transparent Contact",
+    "ip_number": "32271 / UC Case 2021-567-0",
+    "published_date": "12/28/2023",
+    "ip_description": "Researchers at the University of California, Santa Barbara have developed a nitride based UVLED with an ultraviolet transparent contact (UVTC) that is an alloy composition of (Ga, Al, In, B)O semiconductors, such as Ga2O3. The n-type, p-type and UVTC regions are all transparent to UV light and minimize internal reflections within the UVLED by eliminating mirrors and/or mirrored surfaces. As a result, the UVLED output is drastically increased via the minimization of light re-absorption. Therefore, the improved light emission efficiency of UVLEDs enables the expansion of ultraviolet semiconductor device applications into a variety of commercial products.\n\nAdvantages\n\nIncreased light efficiency\nExpands UVLED applications\n\nApplications\n\nUVLEDs\nLEDs\nMicro-LEDs",
+    "patents": "United States Of America, Published, Application, 20230420617, 12/28/2023, 2021-567",
+    "page_url": "https://techtransfer.universityofcalifornia.edu/NCD/32271.html"
+  },
+  {
+    "ip_name": "Vapor-Mediated Synthesis of Silicon Carbide Matrices for Ceramic Matrix Composites",
+    "ip_number": "32263 / UC Case 2020-721-0",
+    "published_date": "",
+    "ip_description": "Researchers at the University of California, Santa Barbara have circumvented the issue of wettability in CMC fabrication by using silicon vapor generated from embedded particles or an external source to precondition the internal surfaces of the carbon component of the matrix preform. SiC from the vapor reaction grows slowly so there is no blockage of the narrow flow passages. Moreover, the SiC formed from the vapor is porous on a nanoscale and regulates the access of the melt to the underlying carbon. This allows the pore space to be filled entirely and quickly by the reactive melt, and the reaction with the rest of the carbon can be completed subsequently and uniformly over the entire surface. In combination with the appropriate selection of a Si-alloy melt for the subsequent infiltration, this technique further enhances the temperature capability of the CMC and overall mechanical robustness.\n\nAdvantages\n\nReduced infiltration time\nMinimized defects\nIncreased material utilization\nCarbon source flexibility\n\nApplications\n\nHigh Temperature Ceramic Matrix Composites\nGas Turbines for Aerospace Propulsion\nGas Turbines for Power/Electricity Generation\nProspective Applications in Nuclear Energy Systems",
+    "patents": "WO2022150184",
+    "page_url": "https://techtransfer.universityofcalifornia.edu/NCD/32263.html"
+  },
+  {
+    "ip_name": "Stimulating Phagocytosis Of Cancer Cells By Activating Genes In Macrophages",
+    "ip_number": "32247 / UC Case 2020-704-0",
+    "published_date": "09/05/2024",
+    "ip_description": "Researchers at the University of California, Santa Barbara have demonstrated a more efficient approach to Car-P therapy that increases the phagocytic activity of human macrophages toward cancer cells by 20-fold. This approach involves activating specific genetic mutations in macrophages and/or neutrophils. Expression of an activating mutation in the respective gene causes macrophages to prematurely consume B and T cells, improving the immune system\u2019s ability to engulf and kill cancerous white blood cells. Thus, activated macrophages improve the efficiency of Car-P by enabling a more productive cancer therapy system. \n\nAdvantages\n\nIncreases treatment efficiency\nIncreases patient survivability\n\nApplications\n\nCancer Treatment\nPharmaceuticals\nTherapeutics",
+    "patents": "20240293545",
+    "page_url": "https://techtransfer.universityofcalifornia.edu/NCD/32247.html"
+  },
+  {
+    "ip_name": "",
+    "ip_number": "",
+    "published_date": "",
+    "ip_description": "",
+    "patents": "",
+    "page_url": "https://techtransfer.universityofcalifornia.edu/NCD/32205.html"
+  },
+  {
+    "ip_name": "Monolithically Integrated Laser-Nonlinear Photonic Devices",
+    "ip_number": "32176 / UC Case 2020-057-0",
+    "published_date": "04/21/2022",
+    "ip_description": "Researchers at the University of California, Santa Barbara have developed monolithically integrated non-linear photonic devices with a high quality factor, compact mode volume and ultra-efficient comb generation by leveraging a novel insulator platform. This ultra-low loss AlGaAs-on-insulator platform with anomalous dispersion and quality factors beyond 1.5 x 106 along with the high nonlinear coefficient and the small mode volume to enable a record low Kerr frequency comb generation threshold of approximately 36\u00b5W for a resonator with a 1 THz free spectral range (FSR). This result is approximately 100 times lower power consumption than previous instances of a semiconductor-on-insulator platform.\n\nAdvantages\n\nUnprecedented optical efficiency\nLower fabrication cost\nReduced device volume\n\nApplications\n\nNon-linear photonic devices\nFrequency comb generators\nLIDAR\nSpectroscopy\nTimekeeping\nLaser diodes",
+    "patents": "20220121084",
+    "page_url": "https://techtransfer.universityofcalifornia.edu/NCD/32176.html"
+  },
+  {
+    "ip_name": "Integrated Soft Optoelectronics for Wearable Health Monitoring",
+    "ip_number": "31997 / UC Case 2020-712-0",
+    "published_date": "06/21/2020",
+    "ip_description": "Researchers at the University of California, Santa Barbara have developed new methods for the design and fabrication of stretchable electronic devices that can achieve high integration densities, similar to those that can be achieved using conventional PCBs. This technology produces complex stretchable electronic devices based on a wide variety of thin polymer substrates. Strain relief geometries and features allow these stretchable devices to integrate widely used surface mount devices (SMDs) in complex circuits that may be miniaturized. The process provides sufficient control over geometry to enable the use of automation tools including optical registration and robotic components assembly. This technique is compatible with existing industrial manufacturing processes, making it a scalable solution for manufacturing stretchable electronics. Early demonstrations of this technology have delivered high signal-to-noise ratio physiological measurements of peripheral hemodynamics, confirming its suitability for health monitoring applications, but many other applications are possible.",
+    "patents": "20230155090",
+    "page_url": "https://techtransfer.universityofcalifornia.edu/NCD/31997.html"
+  },
+  {
+    "ip_name": "Improved Dynamic Range in RF Communication Over Optical Fiber",
+    "ip_number": "31922 / UC Case 2019-172-0",
+    "published_date": "",
+    "ip_description": "Researchers at the University of California, Santa Barbara have developed an analog pre-distortion technique to linearize the nonlinear transfer function of an optical modulator such as a Mach-Zehnder modulator. The technique is implemented in Silicon photonics technology, and offers low-cost and large-scale integration compared to other technologies such as LiNb03, lnP and GaAs. Emerging 5G technologies that use antenna remoting to cover an environment (e.g., a room) with a wireless signal will distribute the signal to all antennas with electrical cables or fiber links. In contrast to electrical cables which experience high loss at higher frequencies, fiber links have negligible loss, but they suffer from low SFDR due to nonlinearity of the optical modulator. This technology circumvents this limitation through analog predistortion, achieving high SFDR radio-over-fiber links.",
+    "patents": "United States Of America, Issued Patent, 11,914,263, 02/27/2024, 2019-172",
+    "page_url": "https://techtransfer.universityofcalifornia.edu/NCD/31922.html"
+  },
+  {
+    "ip_name": "III-N Based Material Structures and Circuit Modules Based on Strain Management",
+    "ip_number": "31884 / UC Case 2017-99F-0",
+    "published_date": "",
+    "ip_description": "Researchers at the University of California, Santa Barbara have incorporated strain engineering into electronic and photonic nitride heterostructures, resulting in an upward movement of the light hole band and formation of holes with a relative mass less than electrons. This technology enables significant improvement to the performance of hole-based transistors and enables the fabrication of integrated circuits combining electron and hole-based transistors. In addition, the technology enables improvements to the performance of optoelectronic devices such as LEDs, but especially lasers, through a significant reduction in the threshold carrier density. By utilizing strain as proposed by this technology, the performance of all p-type and n-type III-nitride electronic devices can be enhanced.",
+    "patents": "United States Of America, Issued Patent, 12,230,678, 02/18/2025, 2017-99F",
+    "page_url": "https://techtransfer.universityofcalifornia.edu/NCD/31884.html"
+  },
+  {
+    "ip_name": "III-Nitride Based VCSEL with Curved Mirror on P-Side of the Aperture",
+    "ip_number": "31857 / UC Case 2019-934-0",
+    "published_date": "07/28/2022",
+    "ip_description": "Researchers at the University of California, Santa Barbara have incorporated a curved mirror formed above the p-side of a III-nitride VCSEL to minimize diffraction loss and extend the lifetime and reliability of the device. When using a curved mirror, the reflected light can be focused back into the center of the aperture, thus minimizing diffraction loss. The curved mirror also affords the use of a long cavity, allowing for better thermal management and significant reduction of thermal rollover, thus increasing lifetime and reliability of the VCSEL. Additionally, the tight mode spacing of this technology allows for a greater tolerance of the cavity length, which increases the yield during device growth and fabrication.",
+    "patents": "20220239068",
+    "page_url": "https://techtransfer.universityofcalifornia.edu/NCD/31857.html"
+  },
+  {
+    "ip_name": "Method For The Removal Of Devices Using The Trench",
+    "ip_number": "31802 / UC Case 2019-398-0",
+    "published_date": "",
+    "ip_description": "Researchers at the University of California, Santa Barbara have developed a technique for removing III-nitride devices from their substrates with quick processing times and without significant damage to the devices. Before devices are grown on their substrate, the substrate is etched with another III-nitride layer to form trenches at the surface. A growth-restrict mask is deposited in the trenches so that the device layers do not coalesce with the substrate, and the substrate can be removed and recycled, reducing fabrication costs. This technique is applicable to multiple semiconductor device types.\n\nAdvantages\n\nDrastic cost reduction in GaN substrates via recycling\nSmooth cleaving surfaces\nQuick processing\n\nApplications\n\nLaser diodes\nLEDs\nSchottky barrier diodes\nMOSFETs",
+    "patents": "United States Of America, Issued Patent, 12,051,765, 07/30/2024, 2019-398",
+    "page_url": "https://techtransfer.universityofcalifornia.edu/NCD/31802.html"
+  },
+  {
+    "ip_name": "III-Nitride Tunnel Junction LED with High Wall Plug Efficiency",
+    "ip_number": "31762",
+    "published_date": "11/02/2021",
+    "ip_description": "Commercially-available III-nitride light-emitting diodes (LEDs) use an active region in a biased p-n junction to allow for electron and hole injection. The p-GaN is difficult to contact electrically and has low hole concentration and mobility. This means that p-GaN cannot be used as a current spreading layer and that traditional p-contacts will add significant voltage to devices. Despite these inherent problems, all commercial light emitting devices utilize a p-contact and a material other than p-GaN for current spreading, typically transparent conducting oxides (TCO). Researchers at the University of California, Santa Barbara have introduced an n-GaN layer that produces less loss than a traditional transparent conducting oxide. The favorable current spreading of the n-GaN layer also helps to reduce the droop observed in previous iterations of III-Nitride LEDs. The combined benefits of this novel current spreading layer materialize into a device with over 70% wall plug efficiency. Advantages include improved light extraction, improved energy efficiency (over 70%), and no requirement for TCOs or mirrors. Applications include III-Nitride LEDs.",
+    "patents": "11,164,997",
+    "page_url": "https://techtransfer.universityofcalifornia.edu/NCD/31762.html"
+  },
+  {
+    "ip_name": "Halide-Free Gas Phase Methanol Carbonylation for Environmentally Friendly Acetic Acid Production",
+    "ip_number": "31747 / UC Case 2020-074-0",
+    "published_date": "",
+    "ip_description": "Researchers at the University of California, Santa Barbara have developed a heterogeneous catalyst formulation that enables high yield conversion of methanol and carbon monoxide to acetic acid; all in gas phase. The catalyst relies on ReOx dispersed on inert support, SiO2, in a structure that inhibits byproduct formation, leading to high selectivity of acetic acid. This catalyst enables a gas phase, continuous flow methanol carbonylation process, which does not require water or halides, providing a less expensive and more environmentally friendly acetic acid production option. \n\nAdvantages\n\nGas phase methanol carbonylation \nWater-free \nHalide-free \n\nApplications\n\nPolymer production \nAcetate ester production \nVinyl acetate monomer (VAM) production \nFood production",
+    "patents": "United States Of America, Issued Patent, 12,083,504, 09/10/2024, 2020-074",
+    "page_url": "https://techtransfer.universityofcalifornia.edu/NCD/31747.html"
+  },
+  {
+    "ip_name": "Low-Power Digital Switching Technique to Eliminate RF Interference",
+    "ip_number": "30589 / UC Case 2019-429-0",
+    "published_date": "",
+    "ip_description": "Researchers at the University of California, Santa Barbara have discovered a power digital, low-complexity switching technique for managing out of band signal leakage and switching harmonics. By adding precise switching intervals on the edges of each digital transition, the unwanted interference is eliminated allowing the digital RF front-end to be standards-compliant wideband at lower power consumption than sigma-delta modulation. This technique can also be executed with lower system requirements than the current industry alternatives.\n\nAdvantages\n\nImproved RF signal integrity  \nStandard-compliant wireless transmission \nReduced power consumption \nWideband software-defined radio\n\nApplications\n\n5G networks - New Radio \nInternet of Things (IOT) \nSoftware-defined radio \nRF signal generation",
+    "patents": "Patent Cooperation Treaty Reference for National Filings WO 2020/242778",
+    "page_url": "https://techtransfer.universityofcalifornia.edu/NCD/30589.html"
+  },
+  {
+    "ip_name": "Local Oscillator Modulation for Non-Contiguous Carrier Aggregation",
+    "ip_number": "30588 / UC Case 2019-428-0",
+    "published_date": "10/27/2022",
+    "ip_description": "Researchers at the University of California, Santa Barbara have developed a receiver architecture that is capable of non-contiguous carrier aggregation using a single local oscillator (LO), reaching farther across the range of separated channels without the need for separate receivers. By matching channels across a large RF range to adjacent intermediate frequency (IF) channels, the processing bandwidth of the analog-to-digital converter (ADC) is reduced. This technology circumvents wideband phase-locked loop (PLL) tuning and allows for faster channel switching times, which is critical for spectrum sensing and low-latency. Eliminating the need for multiple receivers also eliminates linear scaling in power consumption.\n\nAdvantages\n\n- Contiguous and non-contiguous carrier aggregation \n- Industry-leading receiver sensitivity \n- Reduced power consumption \n- Smaller form factor\n\nApplications\n\n- 5G mobile devices  \n- Wireless networks",
+    "patents": "20220345165",
+    "page_url": "https://techtransfer.universityofcalifornia.edu/NCD/30588.html"
+  },
+  {
+    "ip_name": "A Sustainable Alternative Route to Produce Methyl Methacrylate",
+    "ip_number": "30303 / UC Case 2015-334-0",
+    "published_date": "06/09/2020",
+    "ip_description": "A sustainable alternative route to produce Methyl methacrylate (MMA) in an engineered yeast strain. Methyl methacrylate (MMA) is a critical raw material in the production of acrylic polymers. It is traditionally produced from non-sustainable, hazardous raw materials, such as acetone and hydrogen cyanide using acetone cyanohydrin (ACH). An alternative production route for MMA that is \u201cgreen\u201d and sustainable would reduce hazardous waste, which has a positive impact on the environment and addresses its traditional production from petroleum. Researchers at the University of California, Santa Barbara have developed a sustainable alternative route to produce Methyl methacrylate (MMA). By optimizing and engineering yeast strains through metabolic engineering, MAA (methacrylic acid)-CoA is produced directly from glucose at titers approaching 5g/L. This approach allows sustainable raw materials (derived from sugar) to be used as the primary feedstock for MMA production.",
+    "patents": "10,676,766",
+    "page_url": "https://techtransfer.universityofcalifornia.edu/NCD/30303.html"
+  },
+  {
+    "ip_name": "Iii-N Transistor With Stepped Cap Layers",
+    "ip_number": "30302",
+    "published_date": "",
+    "ip_description": "A new structure for III-N transistors that is able to maintain a high breakdown and operating voltage while improving the gain of the device. Researchers at the University of California, Santa Barbara have created a new structure for III-N transistors that is able to maintain a high breakdown and operating voltage while improving the gain of the device. A stepped cap design is used to increase the operating voltage of the transistor and therefore provides a higher output power. Additionally, having a device that offers higher power allows for greatly simplified system level design due to the need for fewer parts to be combined. \n\nAdvantages\n\nIncreased breakdown voltage\nMore reliable device operation\nIncreased power allows for a simplified system with fewer parts\n\nApplications\n\nGaN-Based Transistors\nSolid State Lighting",
+    "patents": "11,594,625",
+    "page_url": "https://techtransfer.universityofcalifornia.edu/NCD/30302.html"
+  },
+  {
+    "ip_name": "Microfluidics Device and Methods of Detecting Airborne Agents",
+    "ip_number": "30224 / UC Case 2007-499-0",
+    "published_date": "04/30/2013",
+    "ip_description": "Researchers at the University of California, Santa Barbara have developed a microfluidic platform for real time sensing of volatile airborne agents, such as explosives. The Free-Surface Fluidics (FSF) platform enables the exploitation of several physical phenomena and is capable of operating in a range of length scales from tens of micrometers to a few nanometers. The system architecture can also be incorporated with a variety of sensing techniques, such as surface enhanced Raman Spectroscopy (SERS), for detection of airborne agents. By incorporating SERS, the resulting system is comprised of sensing methods and devices that are both sensitive and molecular-specific.\n\nAdvantages\n\nMolecular specificity\nOperates at range of length scales (10\u00b5m-nm)\n\nApplications\n\nEnvironmental toxicology\nBiomedicine\nExplosives and bio warfare detection",
+    "patents": "8,431,409",
+    "page_url": "https://techtransfer.universityofcalifornia.edu/NCD/30224.html"
+  },
+  {
+    "ip_name": "Bonding of Heterogeneous Material for Improved Yield and Performance of Photonic Integrated Circuits",
+    "ip_number": "30044 / UC Case 2014-312-0",
+    "published_date": "",
+    "ip_description": "A new approach to photonic integrated circuit fabrication. Cost is a fundamental design criterion for data centers looking for a technological solution for the transition between centers dominated by high speed copper connections and those with optical connections. Silicon photonics fabrication technology is reaching the point where it can offer superior performance and similar lifecycle costs to current technologies. One challenge to silicon photonic fabrication is the mismatch that occurs when III-V materials are grown on native III-V substrates then transferred to silicon substrates using the wafer bonding process. This mismatch can result is increased defects and degradation of material quality and device efficiency. Researchers at the University of California, Santa Barbara have developed a new method of photonic integrated circuit fabrication where quantum dot III-V material and silicon waveguides are both grown on silicon substrates and are bonded using the wafer bonding process. Using identical substrates overcomes many of the limitations associated with substrate dissimilarity and also enables further processing of the III-V material before and/or after the wafer bonding. The process also shows potential for scalable, high-yield production of photonic integrated circuits.",
+    "patents": "United States Of America, Issued Patent, 9,360,623, 06/07/2016, 2014-312",
+    "page_url": "https://techtransfer.universityofcalifornia.edu/NCD/30044.html"
+  },
+  {
+    "ip_name": "Soft Burrowing Robot for Simple & Non-Invasive Subterranean Locomotion",
+    "ip_number": "29968 / UC Case 2019-158-0",
+    "published_date": "",
+    "ip_description": "A soft robot that can successfully burrow through sand and dirt, similar to a plant root. Researchers at the University of California, Santa Barbara have created a soft robot that can successfully burrow through sand and dirt, similar to a plant root. Through extension from the top of the body, this robot can substantially increase in length from its original size and can actively control growth direction making it possible to move through tightly constrained environments typically associated with subterranean locomotion. Because lengthening from the tip involves no relative movement of the body with respect to the environment, the body can lengthen along constrained paths without friction. This robot is perfectly suited to assist in search and rescue efforts where exploration of underground areas is imperative. It can also be used to deliver fluids too hard to reach areas. Its burrowing characteristic can be applied to above ground situations as well, such as the cleaning or inspection of difficult to reach spaces in complex machinery. Advantages include: Can be implemented into existing robots, Allows easy and continuous growth underground, Inexpensive and noninvasive approach to burrowing, Possible to grow greater than 100% in length. Applications include: Search and rescue requiring subterranean locomotion (i.e. mudslides), Non-invasive installation of underground irrigation or communication lines, Root-like foundation structures, Cleaning or inspection of difficult to reach spaces (i.e. complex machinery or aircraft), Delivery of fluids to difficult to reach spaces, Installation of wires or irrigation in subterranean areas, Surgical tools.",
+    "patents": "United States Of America Issued Patent 11,633,849, Patent Cooperation Treaty Published Application WO 2020/060858",
+    "page_url": "https://techtransfer.universityofcalifornia.edu/NCD/29968.html"
+  },
+  {
+    "ip_name": "Improved Reliability & Enhanced Performance of III-Nitride Tunnel Junction Optoelectronic Devices",
+    "ip_number": "29876",
+    "published_date": "",
+    "ip_description": "A structure for improving the performance and reliability of III-nitride based tunnel junction optoelectronic devices. Researchers at the University of California, Santa Barbara have developed a structure for improving the performance and reliability of III-nitride based tunnel junction optoelectronic devices. The proposed structure allows for improved surface morphology, leading to a uniform field across the tunnel junction interface. Additionally, both the barrier for interband tunneling distance and the forward voltage in the devices can be significantly reduced. A smoother surface of the n-type material is realized and a higher carrier concentration in the n-type material is observed. Since MOCVD tools are already commonly used in semiconductor processing this technology can be readily and easily applied to the current market. Advantages include enhanced performance, improved reliability, ease of commercialization, smoother surface, and higher carrier concentration in the n-type material. Applications include optoelectronics (LEDs, VCSELs, EELDs, and Solar Cells).",
+    "patents": "United States Of America Issued Patent 11,158,760, United States Of America Published Application 20220029049",
+    "page_url": "https://techtransfer.universityofcalifornia.edu/NCD/29876.html"
+  },
+  {
+    "ip_name": "Optical Identification of Bacteria and/or Treatment of Bacterial Infections Using Engineered Phages",
+    "ip_number": "29866 / UC Case 2018-758-0",
+    "published_date": "",
+    "ip_description": "Researchers at the University of California, Santa Barbara have created strategies to detect and combat bacterial species. The method of detection is rapid, inexpensive, and simple, and it can be used to identify a variety of bacterial species. This strategy is based on the interaction between bacterial cells and the viruses that infect them, phages. Colorimetric sensing allows for clear detection using a visible spectral shift that is produced around aggregation around cell phage complexes. Thiolation of engineered phages allows binding of gold nanoparticles, which aggregate on the phages, amplifying the interaction and resulting in a visible color change. It can be applied to any bacteria that are targeted from a metagenomic sample. While the standard detection time is four hours, this technology can detect bacteria in twenty minutes, or less. This detection strategy requires minimal lab equipment and minimal training. Engineered phages can also be used to selectively target and kill and various bacterial cell types. The phages used can be of any type, serotype, or species. The approach involves a topical application, and is not injected into the body, making it easy to initiate. Further, the phage-targeted thermoablation of selected bacterial cells provides a way to selectively kill harmful organisms while sparing the surrounding healthy tissue.",
+    "patents": "WO 2020/131192",
+    "page_url": "https://techtransfer.universityofcalifornia.edu/NCD/29866.html"
+  },
+  {
+    "ip_name": "Methods for Locally Changing the Electric Field Distribution in Electron Devices",
+    "ip_number": "29539 / UC Case 2006-129-0",
+    "published_date": "02/14/2012",
+    "ip_description": "A surface treatment that can shape the electric field profile in electronic devices in 1, 2, or 3 dimensions. Researchers at the University of California, Santa Barbara developed a surface treatment that can shape the electric field profile in electronic devices in 1, 2, or 3 dimensions. The ability to locally change the electric field distribution can improve the performance of different kinds of devices, including high electron mobility transistors (HEMTs), light emitting diodes (LEDs), and ultraviolet detectors. In HEMTs, the electric field shaping technology allows a reduction in the peak electric field in the channel, increasing the breakdown voltage and decreasing the gate leakage without harming the high-frequency transistor. For LEDs and lasers, the surface treatment can passivate lattice defect like dislocation, point defects, or sidewalls. This reduces leakage current and enhances the luminous efficiency of optical devices.",
+    "patents": "8,114,717",
+    "page_url": "https://techtransfer.universityofcalifornia.edu/NCD/29539.html"
+  },
+  {
+    "ip_name": "Strategy for Detecting Residual Host Cell Proteins Using Aptamers",
+    "ip_number": "29495 / UC Case 2014-310-0",
+    "published_date": "",
+    "ip_description": "A proposal for the use of aptamers (nucleic acids that are selected for high-affinity binding to target ligands) for the detection of HCPs in recombinant biopharmaceutical products. Researchers at the University of California, Santa Barbara propose using aptamers (nucleic acids that are selected for high-affinity binding to target ligands) for the detection of HCPs in recombinant biopharmaceutical products. Specifically, the method uses next generation sequencing (NGS) to identify aptamers for binding to all targets in the mixture in parallel, and uses the aptamer arrays to measure the actual binding simultaneously of all aptamers to all targets in the mixture. Because aptamer generation is not dependent on immune recognition, they have the potential to detect all HCP species without depleting any targets. This strategy works as an \u201call-in-one\u201d detection process leading to lower costs and increased reliability in targeting the HCPs.",
+    "patents": "United States Of America, Issued Patent, 11,007,849, 05/18/2021, 2014-310",
+    "page_url": "https://techtransfer.universityofcalifornia.edu/NCD/29495.html"
+  },
+  {
+    "ip_name": "",
+    "ip_number": "",
+    "published_date": "",
+    "ip_description": "",
+    "patents": "",
+    "page_url": "https://techtransfer.universityofcalifornia.edu/NCD/29481.html"
+  },
+  {
+    "ip_name": "Quantum Dot Photonic Integrated Circuits",
+    "ip_number": "29480 / UC Case 2018-609-0",
+    "published_date": "",
+    "ip_description": "A PIC based on quantum dots, grown on Si that allows lasers, modulators, and photodetectors to be integrated. Researchers at the University of California, Santa Barbara propose a PIC based on quantum dots, grown on Si that allows lasers, modulators, and photodetectors to be integrated. The use of quantum dots would enable higher device performance, better reliability, and system-level performance over conventional quantum well technology. The advantage of quantum dot modulators is the 3D confinement of electrons and holes which enhances that exciton enhancement. The more rapid change in absorption with wavelength makes quantum confinement stark effect modulators work better. Quantum dot photodetectors leads to higher bandwidth efficiency products. These quantum dot based PICs have demonstrated superior performance, improved reliability, and have vastly improved laser lifetimes.",
+    "patents": "11,693,178, 11,435,524, 10,761,266, 21/0218230",
+    "page_url": "https://techtransfer.universityofcalifornia.edu/NCD/29480.html"
+  },
+  {
+    "ip_name": "Closure-Tree: An Index Structure for Graph Queries",
+    "ip_number": "29298 / UC Case 2006-251-0",
+    "published_date": "",
+    "ip_description": "A graph comparison technique that can support both subgraph and similarity queries. Researchers at the University of California, Santa Barbara, have developed a new graph comparison technique, known as Closure-tree or C-tree. C-tree is the first index structure that can support both subgraph and similarity queries. Subgraph queries involve looking for a specific pattern in a graph. They are useful for a number of applications including identification of similar protein structures, finding similar biological pathways such as protein interaction networks, identification of similar chemical compounds, and identification of targets and leads during drug discovery. Experiments on chemical compounds and synthetic graphs show that, for subgraph queries, C-tree outperforms existing techniques by up to two orders of magnitude. Similarity queries involve looking for a graph that is similar to another graph. Similarity queries can be used for applications such as schema matching and classification. Advantages include: Supports both subgraph queries and similarity queries, Extends many techniques developed for spatial access methods, Graph closures capture the entire structural information of constituent graphs, which implies high pruning rates, Dynamic insertion/deletion and disk-based access of graphs can be done efficiently, Avoids an exhaustive enumeration procedure as in GraphGrep and GIndex. Applications include: Drug discovery, Schema matching, Classification.",
+    "patents": "8,396,884",
+    "page_url": "https://techtransfer.universityofcalifornia.edu/NCD/29298.html"
+  },
+  {
+    "ip_name": "Joint Pharmacophoric Space through Geometric Features",
+    "ip_number": "29289 / UC Case 2011-077-0",
+    "published_date": "",
+    "ip_description": "Pharmacophore analysis through examination of Joint Pharmacophore Space of chemical compounds, targets, and chemical/biological properties. Despite steady and significant increases in R&D spending, an increase in the number of new drug applications and approvals has not been seen. Current target-driven approaches to drug discovery limit focus to a single target and have phenotypic effects such as toxicity and low efficacy that are discovered too late in the discovery process. As a result, current interest is shifting towards evaluating biological properties at the onset and attempting to gain a global understanding of the binding activity between compounds and targets. There have been a number of attempts to understand the relationship between drug chemical structures and target proteins, including pharmacophore based screening. A key weakness of existing pharmacophore based technologies is its ability to analyze compounds only on target-by target basis, aimed at extracting and optimizing a specific pharmacophore. Often, multiple pharmacophoric targets need to be analyzed in the search for drugs against diseases such as cancer or AIDS. Researchers at the University of California, Santa Barbara have proposed a novel method for pharmacophore analysis by examining the Joint Pharmacophore Space (JPS) of chemical compounds, targets, and chemical/biological properties. The underlying geometry of the pharmacophores is responsible for binding between compounds and targets as well as properties of compounds such as Blood Brain Barrier (BBB) permeability. The use of geometric pharmacophoric features allows for the consideration of different conformations of compounds and isolation of the geometry of important pharmacophoric points in these conformations. The benefits of such joint pharmacophore analysis include increased sensitivity and specificity of results, flexibility in posing queries, scaffold hopping, and early in silico prediction and pruning of compounds with undesirable properties.",
+    "patents": "United States Of America, Issued Patent, 9,218,460, 12/22/2015, 2011-077",
+    "page_url": "https://techtransfer.universityofcalifornia.edu/NCD/29289.html"
+  },
+  {
+    "ip_name": "",
+    "ip_number": "",
+    "published_date": "",
+    "ip_description": "",
+    "patents": "",
+    "page_url": "https://techtransfer.universityofcalifornia.edu/NCD/29210.html"
+  },
+  {
+    "ip_name": "Algorithm for Diabetes Management and Control",
+    "ip_number": "29148 / UC Case 2016-315-0",
+    "published_date": "",
+    "ip_description": "A number of technologies have been developed that optimize the process of managing blood sugar and administering insulin. With the increase of diabetes across the globe, accurate and automated administration of insulin to patients with type 1 diabetes is a major need. The Continuous Glucose Monitoring (CGM) market is growing, with the number of people diagnosed with type 1 diabetes on the rise globally. Safe and efficient software for CGM and Artificial Pancreas (AP) systems will be important for companies growing and competing in this field. This portfolio of technologies has been extensively developed in close collaboration with industry partners. Additionally, the portfolio has been the subject of numerous successful patient/clinical trials (described below) and are protected by a comprehensive patent estate. An Enhanced Model Predictive Control for the Artificial Pancreas Using a Conficence Index Based on Residual Analysis of Past Predictions UC Case no. 2016-315 An adaptive strategy for monitoring accurate glucose predictions that provides safe and effective glucose management and results in a significant reduction of hypoglycemia events. When compared to a static controller, this adaptive controller is able to avoid hypoglycemia more efficiently while the static controller has spurious episodes of hypoglycemia. Daily Periodic Target-Zone Modulation in the Model Predictive Control Problem for Artificial Pancreas for Type 1 Diabetes Applications UC Case no. 2013-384 A model predictive control (MPC) strategy to prevent a nocturnal hypoglycemic event using an Artificial Pancreas. The advantage of this MPC is that it employs periodic time-dependent target zones and insulin input constraints. This allows the safe operation of glycaemia controllers while the patient is sleeping and not able to intake glucose in the event of a hypoglycemic risk.",
+    "patents": "10,878,964",
+    "page_url": "https://techtransfer.universityofcalifornia.edu/NCD/29148.html"
+  },
+  {
+    "ip_name": "Mucoadhesive Devices for Oral Delivery of Various Active Agents",
+    "ip_number": "29019 / UC Case 2011-835-0",
+    "published_date": "04/14/2016",
+    "ip_description": "Effective and easily accepted system of oral delivery of therapeutic drugs. Oral dosing of active agents is attractive for many reasons, including ease of administration and high patient compliance. However, for some active agents, such as poorly absorbed, sensitive, and/or high molecular weight active agents, oral dosing is ineffective for achieving sufficient blood concentration of the active agent as compared to alternative dosing strategies. Furthermore, macromolecules such as proteins and polypeptides have become an important component of therapeutic drugs. However, these macromolecules must be administered through an injection limiting their acceptance by patients. While oral delivery is the preferred method of patients, its use is limited by proteolytic degradation in the stomach and intestine as well as by low permeability of the epithelial barrier. Researchers have attempted a number of strategies to circumvent the hostile environment of the GI tract, but they lack the ability to fully protect the active agent. Therefore they suffer from low efficacy. Researchers at the University of California, Santa Barbara have developed systems for transmucosal delivery of active agents. These systems include mucoadhesive devices inspired by the design of transdermal patches. Such systems advance the transmission of active agents by improving absorption and directionality of such agents. The directional delivery of active agents to a tissue dramatically increases the local concentration of an active agent, improving absorption. This prevents unwanted absorption of other materials and allows for a direct target and release. Transmucosal delivery, as an alternative dosing strategy to injections, allows for an effective and easily accepted oral delivery system that will lead to an increase of treatment successes.",
+    "patents": "20160101056",
+    "page_url": "https://techtransfer.universityofcalifornia.edu/NCD/29019.html"
+  },
+  {
+    "ip_name": "Reconfigurable Physically Unclonable Function (PUF) Based Security",
+    "ip_number": "28868",
+    "published_date": "",
+    "ip_description": "Researchers at the University of California, Santa Barbara have developed an architecture for hardware-intrinsic security primitives that use random process-induced variations in subthreshold slope, leakage and tuning accuracy of Flash memories to build a reliable Physically Unclonable Function (PUF). This architecture allows for PUF circuits with fast and low power operation and low chip-area. The simple and low-cost design, small footprint, CMOS integration compatibility, and reconfigurability make this technology superior to existing PUF hardware and pitch-perfect for security applications. A prototype of these RX-PUFs features enhanced functional performance with a measured bit error rate of 0.7% at room temperature and less than or equal to 5.3% at 100\u00b0 C, without error correction methods. These hardware solutions have wide-ranging applications including IC identification, secure channel communication, and data encryption. In any case, none would require \u201ckey\u201d storage in auxiliary memory, making it virtually impenetrable from attack. Advantages include fast & low power operation (10 ns / 20 uW per bit), CMOS compatibility, random & unpredictable primitives, low chip-area overhead (scalable to 28nm+), programmability, enhanced resilience against attack (including machine learning attacks), reconfigurability, and excellent physical characteristics (1600 F2/bit density and up to 41 fJ/bit energy efficiency). Applications include semiconductors, IC identification, secure channel communication, anti-counterfeiting, military equipment, \u201ckey-less\u201d data encryption, and data storage.",
+    "patents": "10,812,084",
+    "page_url": "https://techtransfer.universityofcalifornia.edu/NCD/28868.html"
+  },
+  {
+    "ip_name": "Methods for Fabricating III-Nitride Tunnel Junction Devices",
+    "ip_number": "28865 / UC Case 2017-130-0",
+    "published_date": "04/20/2021",
+    "ip_description": "Methods of physical vapor deposition for III-nitride tunnel junction devices. Current commercially-available III-Nitride light-emitting diodes (LEDs) and edge-emitting laser diodes (EELDs) use an active region in a biased p-n junction to allow for electron and hole injection. However, since p-type gallium nitride (p-GaN) is difficult to contact electrically and has low hole concentration and mobility, p-GaN cannot be used as a current spreading layer and traditional p-contacts will add significant voltage to devices. Despite these inherent problems, all commercial light emitting devices utilize a p-contact and a material other than p-GaN for current spreading, typically transparent conducting oxides (TCO). A tunnel junction is a diode comprised of a very highly doped (n+/p+) interface that allows for electrons to tunnel between the valence band conduction band. Although in principle a highly doped Esaki-type homojunction diode should provide the lowest-loss tunnel junction, there have been a number of difficulties achieving high quality tunnel junctions in the GaN material system. Researchers at the University of California, Santa Barbara have satisfied the need for improving the performance of III-nitride devices by overcoming the limitations currently in the field. Improvements include alternative methods for creating tunnel junction devices, including physical vapor deposition (e.g., sputter deposition) and MOCVD regrowth deposition, and III-Nitride tunnel junction improvement through reduction of the magnesium memory effect. Self-emissive III-V micro LED-based displays using low resistance tunnel junctions leveraging these improvements have been fabricated.",
+    "patents": "10,985,285",
+    "page_url": "https://techtransfer.universityofcalifornia.edu/NCD/28865.html"
+  },
+  {
+    "ip_name": "Diels-Alder Chemistry for Bioconjugation and Incorporation into Non-Natural Amino Acids",
+    "ip_number": "28855",
+    "published_date": "",
+    "ip_description": "A bioconjugation method to covalently link molecular entities to polypeptides such as antibodies using a simple one-pot process. Researchers at UC Santa Barbara have developed a bioconjugation method to covalently link molecular entities to polypeptides such as antibodies using a simple one-pot process. Tests show that two cyclopentadiene derivatives could be incorporated site-specifically into an antibody and react with quantitative conversion with the maleimide-drug Vedotin. This reaction can be employed under mild conditions in specific conjugation reactions comprising a biological molecule. In some instances the reaction takes as little as two hours at room temperature with no added reagents or catalysts. The key feature of this strategy is the serum stability of the linkage compared to the commonly used thiol-maleimide bond, potentially improving the pharmacokinetic properties of the ADC. This improved serum stability is independent of the site of incorporation, which would streamline ADC development compared to the THIOMAB strategy. Advantages include: Uses commercially available off-patent maleimide-drugs, Can be produced in high yields, Reactions can take as little as two hours at room temperature, Is a simple one-step process, More stable in serum than thiol-maleimide. Applications include: Pharmaceutical products (ADCs or radioactive tracers), Other conjugation uses (biochemical studies, bioceramics, polymers, nanochemistry).",
+    "patents": "11759526, 20230321267",
+    "page_url": "https://techtransfer.universityofcalifornia.edu/NCD/28855.html"
+  },
+  {
+    "ip_name": "Geometrical Characterization of Surfaces from Noisy 3D Fluorescence Microscopy Data",
+    "ip_number": "28839 / UC Case 2017-619-0",
+    "published_date": "",
+    "ip_description": "Researchers at the University of California, Santa Barbara have developed a fully automated algorithm to determine the location and curvatures of an object\u2019s surface from 3D fluorescence images. Data shows that the algorithm can detect the location of fluorescently labeled surfaces with sub-pixel resolution, and relative errors, below 2% for typical imaging conditions and even in the presence of substantial noise. The ability to characterize the geometry of surfaces at high resolution is relevant for many applications in several disciplines. A specific application of this method is the measurement of cell-generated mechanical forces in 3D multicellular environments, from in vitro multicellular aggregates (including embryoid bodies and organoids) to living developing tissues and organs. Using this algorithm to reconstruct the surface deformations of microdroplets injected between cells, it is possible to quantify cellular forces. No other technique exists to perform these measurements and there is a large and fast growing community interested in performing measurements of cellular forces in these living systems. This work allows quantitative measurements in the presence of high-level noise, enabling a wide range of applications.",
+    "patents": "",
+    "page_url": "https://techtransfer.universityofcalifornia.edu/NCD/28839.html"
+  },
+  {
+    "ip_name": "Drift-Free and Calibration-Free Measurement of Analytes",
+    "ip_number": "28737 / UC Case 2017-607-0",
+    "published_date": "07/16/2017",
+    "ip_description": "A method of achieving the calibration- and drift-free operation of voltammetric electrochemical biosensors. Researchers at the University of California, Santa Barbara have created a method of achieving the calibration- and drift-free operation of voltammetric electrochemical biosensors. This approach can be used to determine absolute target concentrations without the need to calibrate the sensor. For the measurement of several drugs the errors between experimental values and estimated values are within 10% across broad concentration ranges. Additionally, this approach eliminates the baseline drift problem seen in complex media, such as in flowing, undiluted whole blood. \n\nAdvantages\n\nCalibration-free operation reduces the need for high precision fabrication \nCalibration-free operation reduces end user burden and costs \nIncreased measurement reliability\nLong-duration measurements in complex media\n\nApplications\n\nDetection of a variety of targets including small molecules, ions, specific oligonucleotides and proteins in complex sample matrices, such as in the living body",
+    "patents": "WO 2018/223024",
+    "page_url": "https://techtransfer.universityofcalifornia.edu/NCD/28737.html"
+  },
+  {
+    "ip_name": "Frequency-Based Filtering of Mechanical Actuation",
+    "ip_number": "28675 / UC Case 2012-086-0",
+    "published_date": "",
+    "ip_description": "Researchers at the University of California, Santa Barbara have created a device that delivers pressure or displacement to specific locations based on the frequency of the actuator used as input. The device serves as a mechanical filter where excitation applied at one frequency is delivered to a specific output location with a magnitude that depends on the excitation frequency. By modulating the dimensions of the device\u2019s fluidic network, and the mechanical response of the deformable features serving as the input and outputs, one can construct different types of filters: low-pass, band-pass, or high pass. There are many advantages to using a fluidic network for filtering and actuation. The filtering/actuation system can be re-used with multiple chips and the frequency-specific response of the actuating system can be designed to generate large displacement amplitudes that can be translated onto the chip.",
+    "patents": "United States Of America Issued Patent 9,987,576, Patent Cooperation Treaty Published Application WO2014/093360",
+    "page_url": "https://techtransfer.universityofcalifornia.edu/NCD/28675.html"
+  },
+  {
+    "ip_name": "A Hybrid Silicon Laser-Quantum Well Intermixing Wafer Bonded Integration Platform",
+    "ip_number": "27644 / UC Case 2007-591-0",
+    "published_date": "",
+    "ip_description": "An approach for integrating InP-based photonic devices together with low loss silicon photonics and complementary metal-oxide-semiconductor (CMOS) electronics. Researchers at the University of California, Santa Barbara have developed an approach for integrating InP-based photonic devices together with low loss silicon photonics and complementary metal-oxide-semiconductor (CMOS) electronics. This method requires only standard lithography techniques and requires no discrete laser placement or metal-organic chemical vapor deposition (MOCVD), allowing for quicker fabrication with higher device yield. \n\nAdvantages\n\nEnables a wide range of InP-based functionalities to be performed on silicon on insulator (SOI)-based platforms \nRequires no discrete laser placement or MOCVD growth \nQuicker device fabrication \nHigher device yield\n\nApplications\n\nModulators \nTunable lasers \nAmplifiers \nPhotodetectors",
+    "patents": "8,559,478",
+    "page_url": "https://techtransfer.universityofcalifornia.edu/NCD/27644.html"
+  },
+  {
+    "ip_name": "Drift-Free, Self-Calibrated Interrogation Method For Electrochemical Sensors Based On Electron Transfer Kinetics",
+    "ip_number": "27642 / UC Case 2017-248-0",
+    "published_date": "",
+    "ip_description": "Researchers at the University of California, Santa Barbara have developed a new method using chronoamperometry in place of voltammetry to obtain data from electrochemical sensors, including electrochemical biosensors, reliant on binding-induced changes in electron transfer rates to produce an output signal. This method offers many advantages including calibration-free, drift-resistant operation, vastly improved measurement time resolution, improved signal-to-noise ratios, and improved signal gain. Current electrochemical sensing approaches rely on binding-induced changes in electron transfer kinetics and commonly use voltammetric approaches. However, recently there has been an interest in using chronoamperometric interrogation for electrochemical sensing, as opposed to voltammetric approaches. The use of chronoamperometrics is expected to produce significant improvements and advances.",
+    "patents": "Patent Pending",
+    "page_url": "https://techtransfer.universityofcalifornia.edu/NCD/27642.html"
+  },
+  {
+    "ip_name": "Anchor Based Sequence Clustering Algorithm for Efficient & Accurate Motif Discovery",
+    "ip_number": "27614 / UC Case 2017-608-0",
+    "published_date": "",
+    "ip_description": "Researchers at the University of California, Santa Barbara have created a new strategy for speeding up motif discovery, an anchor based sequence clustering algorithm (ASC) that works significantly faster and with greater accuracy than current motif finding algorithms. This new strategy groups sequences containing the same motif together, creating a subset of sequences. By limiting the input to subsets, traditionally time consuming algorithms can now be completed in a more efficient time span. The ASC can process millions of protein sequences within one day while currently available motif finding algorithms take multiple years. ASC is easily adaptable and can be used on any existing motif finding algorithm, including MEME. Advantages include: Operates with improved accuracy, Operates significantly faster, Can be used in any existing motif finding algorithm. Applications include: Motif Discovery, Biological and medical sectors.",
+    "patents": "",
+    "page_url": "https://techtransfer.universityofcalifornia.edu/NCD/27614.html"
+  },
+  {
+    "ip_name": "Highly Stretchable & Flexible Electronic Sensors",
+    "ip_number": "27609 / UC Case 2017-470-0",
+    "published_date": "",
+    "ip_description": "Researchers at the University of California, Santa Barbara have discovered a new approach to creating highly stretchable electronic devices using twisted conductive microtubules. The devices are suited for use as stretchable electronic interconnects, and, in other applications, may be employed as sensitive sensors for strain, contact force, rotation, and tactile sensing. They offer very high levels of stretchability (>400% strain), are highly flexible, durable, and reliable. Through the use of a twisted helical structure, the electronic and mechanical performance of the devices can be tuned to meet application requirements. Their simple design makes it easy to attach them to the human body or to a mechanism or tool using standard fixtures or adhesives. The sensors are compact, multifunctional and can easily integrate into various applications such as robotics, soft electronics, healthcare, and many more.",
+    "patents": "United States Of America, Issued Patent, 10,908,038, 02/02/2021, 2017-470",
+    "page_url": "https://techtransfer.universityofcalifornia.edu/NCD/27609.html"
+  },
+  {
+    "ip_name": "A Cavity-Free Self-Referencing Frequency Comb",
+    "ip_number": "27592",
+    "published_date": "",
+    "ip_description": "A self-referencing frequency comb based on high-order sideband generation (HSG) that does not require cavities. Applications include \"set-and-forget\" optical atomic clocks and high-resolution spectrometers for airborne chemicals. Researchers at the University of California, Santa Barbara have discovered high-order sideband generation (HSG), a new phenomenon in the interaction of light with matter. HSG enables a new approach to creating self-referencing frequency combs that do not require cavities. Advanced terahertz-frequency sources will enable self-referencing frequency combs based on HSG with low cost, size, weight and power, eventually on the scale of a chip. The principles of HSG enable combs operating at wavelengths ranging from the long-wave infrared to the ultraviolet. Applications include robust, miniaturized, \"set-and-forget\" optical atomic clocks, and high-resolution spectrometers for airborne chemicals that could be deployed on a mobile platform like a cell phone. Advantages include increased frequency-stability of comb teeth, small cost, weight, size and power, and simplified tuning. Applications include military/weapons and dead reckoning in GPS-denied environments.",
+    "patents": "10,490,974",
+    "page_url": "https://techtransfer.universityofcalifornia.edu/NCD/27592.html"
+  },
+  {
+    "ip_name": "Multiple Nanoemulsions and Complex Nanoparticles for Encapsulation and Release",
+    "ip_number": "27416 / UC Case 2017-473-0",
+    "published_date": "",
+    "ip_description": "Researchers at the University of California, Santa Barbara have created stabile multinanoemulsions using sequential high-energy emulsification which can be used as a final product or to make nanoparticles. The emulsification is achieved using standard, scalable equipment (e.g. homogenization). It can be used to produce both oil-in-water-in-oil (O/W/O) or water-in-oil-in-water (W/O/W) double nanoemulsions, and is compatible with both organic and nonorganic materials, including natural products and generally regarded as safe (GRAS) components. For example, one can put water droplets in fat oils to create low-calorie food emulsions. Alternatively, the emulsions can be used to create \u201cnanojellies\u201d with a polysaccharide matrix and encapsulated oil nanodroplets for water-dispersable oil formulations. The emulsion process can be used to create colloidally-stable, nano-sized particles making applicable to pharmaceuticals and agriculture. Additionally, the emulsion process can be used to release an encapsulated ingredient or particle, which can be controlled by adjusting the size and number of inner droplets. Furthermore, this process allows for the stabilization and separation of drugs or chemicals that share the same space.",
+    "patents": "United States Of America Issued Patent 11,254,773, Patent Cooperation Treaty Published Application WO 2018/209293",
+    "page_url": "https://techtransfer.universityofcalifornia.edu/NCD/27416.html"
+  },
+  {
+    "ip_name": "Tunnel Junction Devices with Optically-Pumped III-Nitride Layers",
+    "ip_number": "27412 / UC Case 2016-324-0",
+    "published_date": "08/09/2022",
+    "ip_description": "A method of replacing standard electrical injection of the quantum wells in semiconductor devices with optically-pumping, by coupling a short-wavelength electrically pumped active region to a long-wavelength optically pumped region via a tunnel junction. Researchers at the University of California, Santa Barbara have developed a method of replacing standard electrical injection of the quantum wells in semiconductor devices with optically-pumping, by coupling a short-wavelength electrically pumped active region to a long-wavelength optically pumped region via a tunnel junction. Optically pumping allows for the creation of multiple quantum wells, thereby reducing the relaxation of high-indium content layers. Epi stacks optimized for optical pumping may be grown at lower temperatures. Additionally, with optically pumping long wavelength quantum wells, the doping profile can be engineering to optimize the emission wavelength.",
+    "patents": "United States Of America, Issued Patent, 11,411,137, 08/09/2022, 2016-324",
+    "page_url": "https://techtransfer.universityofcalifornia.edu/NCD/27412.html"
+  },
+  {
+    "ip_name": "A Structure For Increasing Mobility In A High-Electron-Mobility Transistor",
+    "ip_number": "27402 / UC Case 2017-462-0",
+    "published_date": "08/24/2021",
+    "ip_description": "A technique that results in a significant increase of electron mobility and sheet charge density at small channel thickness. Researchers at the University of California, Santa Barbara have created a channel structure for semiconductor high-electron mobility transistors (HEMTs) that results in a significant increase of electron mobility and sheet charge density at small channel thickness. This enables the fabrication of devices with increased high frequency power performance and allows for better lateral and vertical scalability. Advantages include increased electron mobility and improved device performance (94 GHz). Applications include high-electron mobility transistors and power electronics.",
+    "patents": "11,101,379",
+    "page_url": "https://techtransfer.universityofcalifornia.edu/NCD/27402.html"
+  },
+  {
+    "ip_name": "Contact Architectures for Tunnel Junction Devices",
+    "ip_number": "27385 / UC Case 2017-132-0",
+    "published_date": "",
+    "ip_description": "Researchers at the University of California, Santa Barbara have optimized light extraction of tunnel junction devices by increasing the reflectivity of the device\u2019s mirror. The high reflectivity of silver has made it the first choice for previous mirror iterations, but its poor conductivity at the requisite thinness requires adjustments which then erode the benefits of its high reflectivity. This technology reconstructs the mirror, replacing silver with aluminum and coating the reflector with a dielectric high-reflection coating. This novel mirror architecture demonstrates a higher reflectivity than pure silver which leads to improved light extraction.\n\nAdvantages\n\nImproved light extraction\nIncreased Chip power\nCurrent spreading with GaN\nNo requirement for a TCO or silver mirrors\nLow contact resistivity & high reflectivity\n\nApplications\n\nLEDs \nIII-Nitride devices \nTunnel junctions",
+    "patents": "United States Of America, Issued Patent, 11,348,908, 05/31/2022, 2017-132",
+    "page_url": "https://techtransfer.universityofcalifornia.edu/NCD/27385.html"
+  },
+  {
+    "ip_name": "Orthogonal Mode Laser Gyro",
+    "ip_number": "27237 / UC Case 2016-772-0",
+    "published_date": "",
+    "ip_description": "Researchers at the University of California, Santa Barbara have significantly improved the sensitivity of ring laser gyroscopes by preventing frequency lock-up with modifications to the counter-propagating optical beams. By making the clockwise and counterclockwise propagating beams orthogonal, the light signals will not become injection-locked to an identical frequency, which would typically result in a rotation reading of zero. Orthogonality is imparted by a non-reciprocal element that is optically coupled with the optical path. This non-reciprocal element can either impart a frequency difference on the two counter-propagating signals (to avoid interference), or it can provide the signals with orthogonal polarizations.\n\nAdvantages\n\nMitigates frequency lock-up, enabling sensing of small rotations\nBalanced optical gain in clockwise and counterclockwise directions\nTunable frequency\nEliminates requirement of a mechanical dither\n\nApplications\n\nInertial navigation systems (INS) in guided missiles, aircraft, spacecraft, and ships\nSelf-driving vehicles\nRobotics",
+    "patents": "10,180,325",
+    "page_url": "https://techtransfer.universityofcalifornia.edu/NCD/27237.html"
+  },
+  {
+    "ip_name": "Epitaxial Laser Integration on Silicon Based Substrates",
+    "ip_number": "27119 / UC Case 2016-912-0",
+    "published_date": "",
+    "ip_description": "A low-cost, highly scalable approach to integrating a compound-semiconductor laser or light source with silicon-photonic circuitry. Researchers at the University of California, Santa Barbara have created a low-cost, highly scalable approach to integrating a compound-semiconductor laser or light source with silicon-photonic circuitry. The present invention discloses a silicon-photonic integrated circuit comprising a compound-semiconductor-based quantum-dot laser structure that is epitaxially grown on an indirect-bandgap substrate comprising a surface waveguide. The present invention provides an enabling technology for the low-cost manufacture of efficient lasers on silicon, as well as their optical coupling to silicon-based waveguides. The desirability, scalability, and commercial success of conventional approaches for integrating compound semiconductor devices and silicon-based integrated-optics substrates has been limited by the high cost of compound-semiconductor substrates as compared to silicon-based substrates, as well as the incurrence of extra processing steps and processing complexity associated with the integration. As a result, there remains a need for a simple, low-cost approach to integrating compound-semiconductor devices and silicon-based integrated-optics substrates to form practical, commercially viable silicon-photonics systems.",
+    "patents": "10,761,266",
+    "page_url": "https://techtransfer.universityofcalifornia.edu/NCD/27119.html"
+  },
+  {
+    "ip_name": "Dual-Labeled E-AB Platform for Continuous, Real-Time Monitoring of Small Molecules",
+    "ip_number": "27069 / UC Case 2016-99M-0",
+    "published_date": "",
+    "ip_description": "A dual-reporter correction to enhance the performance of electrochemical aptamer-based sensors in whole blood. To combat this, researchers at UC Santa Barbara have created a dual-reporter correction to enhance the performance of electrochemical aptamer-based sensors in whole blood. This sensor architecture paves a way to real-time and continuous metabolic, pharmacokinetic and drug-response measurements. The approach largely eliminates the drift observed for both cocaine and aminoglycoside-detecting E-AB sensors, reducing drift of order 25% - 30% to less than 2% over many hours of continuous operation in flowing, undiluted whole blood. Advantages include correcting for sensor drift in flowing whole blood and baseline drift corrections for more than 20 hours. Applications include monitoring of narrow therapeutic index drugs, monitoring specific molecules in complex matrices such as tissue culture, and real-time and continuous monitoring of specific molecules in undiluted whole blood.",
+    "patents": "United States Of America, Issued Patent, 11,202,587, 12/21/2021, 2016-99M",
+    "page_url": "https://techtransfer.universityofcalifornia.edu/NCD/27069.html"
+  },
+  {
+    "ip_name": "Stand-Alone Ceramic Phosphor Composites for Laser-Excited Solid-State White Lighting",
+    "ip_number": "26025 / UC Case 2016-99P-0",
+    "published_date": "03/29/2022",
+    "ip_description": "A method for generating a stand-alone ceramic phosphor composite for use in solid state white light generating devices that successfully reduces the operating temperature of the phosphor material by 50%, increases lumen output, reduces cost of materials, and decreases preparation time. Researchers at the University of California, Santa Barbara have created a method for generating a stand-alone ceramic phosphor composite for use in solid state white light generating devices that successfully reduces the operating temperature of the phosphor material by 50%, increases lumen output, reduces cost of materials, and decreases preparation time. The compound consists of a phosphor material and a filler oxide. The phosphor material is a UV and blue absorbing inorganic phosphor that efficiently converts blue light to yellow. The method uses spark plasma sintering (SPS) material preparation that promotes densification in less than 30 minutes, resulting in very dense and robust samples. Advantages: Drastically lower operating temperatures, Increased light output, Reduced manufacturing costs and time, Decreased preparation time. Applications: Light Emitting Diodes (LEDs), Laser Diodes (LDs), Phosphors.",
+    "patents": "United States Of America, Issued Patent, 11,286,419, 03/29/2022, 2016-99P",
+    "page_url": "https://techtransfer.universityofcalifornia.edu/NCD/26025.html"
+  },
+  {
+    "ip_name": "Integrated Reconfigurable Circulator",
+    "ip_number": "25991 / UC Case 2016-319-0",
+    "published_date": "05/25/2021",
+    "ip_description": "Researchers at UC Santa Barbara have created a photonic integrated circuit (PIC) comprised of an integrated non-reciprocal device that can be reversed, is monolithic, and can be integrated with lasers and modulators. This method takes an input from one port (#1) and sends it to the next port (#2) and so forth, until the last port (N) sends the signal to the first port (#1). The present invention enables integration of low-optical-loss non-reciprocal devices in a PIC in a simple, low-cost manner. \n\nAdvantages\n\n- Reversible\n- Reconfigurable\n- Reduced cost \n\nApplications\n\n- Can be integrated with lasers & modulators",
+    "patents": "United States Of America, Issued Patent, 11,016,317",
+    "page_url": "https://techtransfer.universityofcalifornia.edu/NCD/25991.html"
+  },
+  {
+    "ip_name": "Enhanced Light Extraction LED with a Tunnel Junction Contact Wafer Bonded to a Conductive Oxide",
+    "ip_number": "25741 / UC Case 2016-324-0",
+    "published_date": "08/09/2022",
+    "ip_description": "Researchers at the University of California, Santa Barbara have developed a method for bonding transparent conductive oxides on III-nitride materials using wafer bonding techniques. Light emitting devices (LEDs) can be processed using this technique which yields higher efficiency devices than traditional methods and allows for greater design options for fabricating devices such as fully transparent tunnel junction-based III-nitride-based LEDs.\n\nAdvantages\n\nIncreased light extraction efficiency\nGreater design options for fabricating devices\n\nApplications\n\nFully transparent tunnel junction-based LEDs\nLEDs",
+    "patents": "11,411,137",
+    "page_url": "https://techtransfer.universityofcalifornia.edu/NCD/25741.html"
+  },
+  {
+    "ip_name": "",
+    "ip_number": "",
+    "published_date": "",
+    "ip_description": "",
+    "patents": "",
+    "page_url": "https://techtransfer.universityofcalifornia.edu/NCD/25669.html"
+  },
+  {
+    "ip_name": "Hemostatic Compositions And Methods Of Use",
+    "ip_number": "25666 / UC Case 2007-313-0",
+    "published_date": "",
+    "ip_description": "Wet layered clays used as hemostatic agent to promote blood clotting. Treatment of severely bleeding wounds can require immediate attention to bring the bleeding under control. Severe bleeding poses a very real risk of death to the casualty if not treated quickly. When a laceration or penetrating trauma (e.g., knife or gun wound) is severe enough or involves critical arteries or veins, the bleeding must be slowed immediately or irreversible damage to organs and mortality can result. In recent years, scientists have attempted to reduce blood flow by applying dehydrated zeolite material to the bleeding site in order to induce hemostasis through dehydration of the wounded area and induction of a blood clot formation. The major disadvantage of this technique is the excessive heat generated at the injured site. There is an urgent need to minimize the heat generated by the hemostatic materials upon contact with blood. Of particular interest are such hemostatic compositions that can be rapidly and safely applied in an emergency situation, such as on the battlefield or at the scene of an accident, without the need for intense training or equipment. Advantages include reduced amount of heat generated by the hemostatic agent, improved blood-clotting efficiency (it is able to stop an arterial hemorrhage), easy to apply, even in an emergency situation, and the hemostatic agents can be packaged in a medical gauze, providing a simple and cost effective device. Applications include blood clotting and wound healing.",
+    "patents": "United States Of America Issued Patent 9,302,025 04/05/2016 2007-313, United States Of America Issued Patent 8,703,634 04/22/2014 2007-313",
+    "page_url": "https://techtransfer.universityofcalifornia.edu/NCD/25666.html"
+  },
+  {
+    "ip_name": "Oxides for Wound Healing and Body Repair",
+    "ip_number": "25665 / UC Case 2006-081-0",
+    "published_date": "05/03/2016",
+    "ip_description": "A homogeneous composition of oxide materials prepared to modulate hemostasis and facilitate the blood coagulation, accelerating bone generation and assisting in wound healing and tissue repair. Treatment of severely bleeding wounds can require immediate attention to bring the bleeding under control. Severe bleeding poses a very real risk of death to the casualty if not treated quickly. When a laceration or penetrating trauma (e.g., knife or gun wound) is severe enough or involves critical arteries or veins, the bleeding must be slowed immediately or irreversible damage to organs and mortality can result. In recent years, scientists have attempted to reduce blood flow by applying dehydrated zeolite material to the bleeding site in order to induce hemostasis through dehydration of the wounded area and induction of a blood clot formation. The major disadvantage of this technique is the excessive heat generated at the injured site. There is an urgent need to minimize the heat generated by the hemostatic materials upon contact with blood. Of particular interest are such hemostatic compositions that can be rapidly and safely applied in an emergency situation, such as on the battlefield or at the scene of an accident, without the need for intense training or equipment. Advantages include reduced amount of heat generated by the hemostatic agent, improved blood-clotting efficiency (it is able to stop an arterial hemorrhage), easy to apply, even in an emergency situation, and the hemostatic agents can be packaged in a medical gauze, providing a simple and cost effective device. Applications include blood clotting and wound healing.",
+    "patents": "United States Of America Issued Patent 9,326,995",
+    "page_url": "https://techtransfer.universityofcalifornia.edu/NCD/25665.html"
+  },
+  {
+    "ip_name": "Mesocellular Oxide Foams as Hemostatic Compositions and Methods of Use",
+    "ip_number": "25664 / UC Case 2008-196-0",
+    "published_date": "",
+    "ip_description": "Mesocellular foams used as hemostatic agents to facilitate clotting, wound healing, and reduce the risk of infection. It can be provided in combination with antibiotics, ions, or anti-inflammatory agents. Treatment of severely bleeding wounds can require immediate attention to bring the bleeding under control. Severe bleeding poses a very real risk of death to the casualty if not treated quickly. When a laceration or penetrating trauma (e.g., knife or gun wound) is severe enough or involves critical arteries or veins, the bleeding must be slowed immediately or irreversible damage to organs and mortality can result. In recent years, scientists have attempted to reduce blood flow by applying dehydrated zeolite material to the bleeding site in order to induce hemostasis through dehydration of the wounded area and induction of a blood clot formation. The major disadvantage of this technique is the excessive heat generated at the injured site. There is an urgent need to minimize the heat generated by the hemostatic materials upon contact with blood. Of particular interest are such hemostatic compositions that can be rapidly and safely applied in an emergency situation, such as on the battlefield or at the scene of an accident, without the need for intense training or equipment. Advantages include reduced amount of heat generated by the hemostatic agent, improved blood-clotting efficiency (it is able to stop an arterial hemorrhage), easy to apply, even in an emergency situation, and the hemostatic agents can be packaged in a medical gauze, providing a simple and cost effective device. Applications include blood clotting and wound healing.",
+    "patents": "United States Of America Issued Patent 8,202,549 06/19/2012",
+    "page_url": "https://techtransfer.universityofcalifornia.edu/NCD/25664.html"
+  },
+  {
+    "ip_name": "Improved Anisotropic Strain Control in Semipolar Nitride Devices",
+    "ip_number": "25606 / UC Case 2009-743-0",
+    "published_date": "",
+    "ip_description": "A method to control the anisotrophy of strain in semipolar nitride-based active layers of optoelectronic devices while maintaining high device performance and efficiency. UC Santa Barbara researchers have created a method to control the anisotrophy of strain in semipolar nitride-based active layers of optoelectronic devices while maintaining high device performance and efficiency. Using this method, misfit dislocations may be restricted to regions located far from device layers. \n\nAdvantages\n\nControlled anistropic strain \nHigh efficiency \nImproved device performance \nIncreased device yield \nReduction of dislocations in active devices\n\nApplications\n\nLEDs \nLaser diodes (LDs)",
+    "patents": "8,866,126, 8,481,991",
+    "page_url": "https://techtransfer.universityofcalifornia.edu/NCD/25606.html"
+  },
+  {
+    "ip_name": "Aluminum-cladding-free Nonpolar III-Nitride LEDs and LDs",
+    "ip_number": "25604 / UC Case 2007-424-0",
+    "published_date": "",
+    "ip_description": "A nonpolar III-nitride LED or LD that does not require any aluminum-containing cladding layers, because the quantum well active region is thick enough to function as an optical waveguide for the device. UC Santa Barbara researchers have created a nonpolar III-nitride LED or LD that does not require any aluminum-containing cladding layers, because the quantum well active region is thick enough to function as an optical waveguide for the device. The exclusion of Al-containing waveguide layers allows for simpler epitaxial growth techniques, helps reduce problems with tensile strain and cracking in Al-containing waveguide layers, and creates higher crystal quality material. The elimination of Al-containing waveguide cladding layers allows for the fabrication of III-nitride-based LDs in the same way as III-nitride-based LEDs. Advantages: Higher crystal quality material, Lower threshold current densities, Reduced voltage operation, Longer lifetimes, Lower production costs.",
+    "patents": "9,040,327, 8,211,723",
+    "page_url": "https://techtransfer.universityofcalifornia.edu/NCD/25604.html"
+  },
+  {
+    "ip_name": "Tunable White Light Based on Polarization-Sensitive LEDs",
+    "ip_number": "25554 / UC Case 2008-653-0",
+    "published_date": "04/24/2018",
+    "ip_description": "UC Santa Barbara researchers have created polarized white LEDs that can improve system efficiency by removing the need for an external polarizer. Alternatively, the color-rendering properties of these LEDs can be manipulated through use of a polarizing element. The color of the LED can be easily changed after it is produced by simply rotating the polarizing element. This allows an end user to adjust the LED to their preference for white light.\n\nAdvantages\n\n- Polarized white emission can reduce system complexity and cost\n- Hue of white light is tunable by end user after fabrication\n- Less costly and simpler than other white light LED manufacturing methods\n\nApplications\n\n- LEDs\n- Applications that require uniform color illumination such as display backlighting, two- and three-dimensional image projectors, and architectural lighting",
+    "patents": "9,951,912",
+    "page_url": "https://techtransfer.universityofcalifornia.edu/NCD/25554.html"
+  },
+  {
+    "ip_name": "Technique for the Nitride Growth of Semipolar Thin Films, Heterostructures, and Semiconductor Devices",
+    "ip_number": "25247 / UC Case 2005-668-0",
+    "published_date": "",
+    "ip_description": "A method to grow semipolar (Ga, Al, In, B)N thin films, heterostructures, and devices on suitable substrates or planar templates in which a large area of the semipolar film is parallel to the substrate surface. Researchers at UC Santa Barbara have developed a method to grow semipolar (Ga, Al, In, B)N thin films, heterostructures, and devices on suitable substrates or planar templates in which a large area of the semipolar film is parallel to the substrate surface. The method uses vapor phase epitaxy, such as metalorganic chemical vapor deposition (MOCVD), in order to grow the semipolar structures. Additionally, this technique alters the crystal growth orientation in order to reduce polarization effects in nitride thin films. This method is stable, energy efficient and cost-effective.",
+    "patents": "10,529,892, 9,793,435, 9,231,376, 8,686,466, 7,846,757",
+    "page_url": "https://techtransfer.universityofcalifornia.edu/NCD/25247.html"
+  },
+  {
+    "ip_name": "Transparent Mirrorless (TML) LEDs",
+    "ip_number": "25240 / UC Case 2007-273-0",
+    "published_date": "",
+    "ip_description": "An invention created by UC Santa Barbara researchers minimizes the re-absorption of LED light by using transparent conductive oxide electrodes (ITO or ZnO) instead of mirrors. This type of LED also employs a gallium nitride substrate instead of a sapphire substrate in order to create more efficient quantum wells and utilizes textured phosphor layers in order to increase luminous efficacy. The combination of transparent conductive oxide electrodes with a nitride LED and a shaped lens results in high levels of light extraction. \n\nAdvantages\n\nReduces reflection \nMinimizes light re-absorption \nIncreases efficiency\n\nApplications\n\nLight emitting diodes (LEDs)",
+    "patents": "United States Of America Issued Patent 7,781,789 08/24/2010 2007-273",
+    "page_url": "https://techtransfer.universityofcalifornia.edu/NCD/25240.html"
+  },
+  {
+    "ip_name": "High-Intensity Solid State White Laser Diode",
+    "ip_number": "25085 / UC Case 2015-204-0",
+    "published_date": "",
+    "ip_description": "A solid state white lighting device consisting of a blue laser diode that emits light onto a single crystal phosphor, resulting in the emission of high-intensity white light. UC Santa Barbara researchers have devised a solid state white lighting device consisting of a blue laser diode that emits light onto a single crystal phosphor, resulting in the emission of high-intensity white light. The single crystal phosphor absorbs some of the laser diode emission and emits a band of longer wavelength light. The combination of the remaining blue laser emission with the longer wavelength phosphor emission results in white light. Use of a single crystal phosphor allows for the emission of greater than 1100 lumens of white light without damage or degradation to the materials. This enables the replacement of a traditional incandescent light bulb with a single laser diode requiring much less epitaxial wafer area than common LED-based white light sources, which usually consist of 10-20 LEDs.",
+    "patents": "10,495,268",
+    "page_url": "https://techtransfer.universityofcalifornia.edu/NCD/25085.html"
+  }
+]
