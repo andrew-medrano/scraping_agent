@@ -7,7 +7,7 @@ from dotenv import load_dotenv
 os.environ["TOKENIZERS_PARALLELISM"] = "false"
 
 class SemanticSearch:
-    def __init__(self, index_name='tech-transfer-01222024', top_k=20):
+    def __init__(self, index_name='tech-transfer-02162025', top_k=20):
         # Load environment variables
         load_dotenv()
         self.pc = Pinecone(api_key=os.getenv('PINECONE_API_KEY'))

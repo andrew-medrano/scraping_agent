@@ -173,7 +173,7 @@ if __name__ == "__main__":
     import argparse
     parser = argparse.ArgumentParser(description='Generate embeddings for tech transfer data')
     parser.add_argument('--input-dir', default='data/summarized', help='Directory containing JSON files to process')
-    parser.add_argument('--index-name', default='tech-transfer-01222024', help='Name of the Pinecone index to use')
+    parser.add_argument('--index-name', default='tech-transfer-02162025', help='Name of the Pinecone index to use')
     args = parser.parse_args()
     
     run_embedding_pipeline(input_dir=args.input_dir, index_name=args.index_name)

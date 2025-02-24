@@ -5,3 +5,8 @@ pyairtable>=2.2.0
 pinecone-client>=3.0.0
 tqdm>=4.66.1
 openai>=1.30.0
+tkinterweb>=3.19.0
+# Note: tkinter usually comes with Python installation
+# If not present, install python3-tk package via your system package manager
+# For macOS: brew install python-tk
+# For Ubuntu/Debian: sudo apt-get install python3-tk

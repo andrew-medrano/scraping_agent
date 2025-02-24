@@ -11,26 +11,76 @@ load_dotenv()
 
 UNIVERSITY_NAMES = {
     'cmu': 'Carnegie Mellon University',
-    'mit': 'Massachusetts Institute of Technology',
-    'stanford': 'Stanford University',
+    'duke': 'Duke University',
     'harvard': 'Harvard University',
+    'johnsHopkins': 'Johns Hopkins University',
+    'mit': 'Massachusetts Institute of Technology',
+    'ohioState': 'Ohio State University',
     'princeton': 'Princeton University',
+    'rutgers': 'Rutgers University',
+    'stanford': 'Stanford University',
+    'uArizona': 'University of Arizona',
+    'ucDavis': 'University of California, Davis',
+    'uChicago': 'University of Chicago',
     'ucla': 'University of California, Los Angeles',
-    'umich': 'University of Michigan'
+    'ucSanDiego': 'University of California, San Diego',
+    'umich': 'University of Michigan',
+    'uMinnesota': 'University of Minnesota',
+    'uWashington': 'University of Washington'
 }
 
 class TechTransferSummarizer:
     def __init__(self, input_dir='data/raw', output_dir='data/summarized'):
         self.input_dir = Path(input_dir)
         self.output_dir = Path(output_dir)
-        self.client = OpenAI(api_key=os.getenv('DEEPSEEK_API_KEY'), base_url=os.getenv('DEEPSEEK_BASE_URL'))
+        self.client = OpenAI(api_key=os.getenv('OPENAI_API_KEY'))
         
+    def clean_null_values(self, data):
+        """
+        Replace null values with empty strings in the data structure.
+        
+        Args:
+            data: Data structure (dict or list) to clean
+        Returns:
+            Cleaned data structure with null values replaced by empty strings
+        """
+        def replace_nulls(obj):
+            if isinstance(obj, dict):
+                return {k: replace_nulls(v) if v is not None else "" for k, v in obj.items()}
+            elif isinstance(obj, list):
+                return [replace_nulls(item) if item is not None else "" for item in obj]
+            return obj if obj is not None else ""
+        
+        return replace_nulls(data)
+
+    def filter_empty_descriptions(self, data):
+        """
+        Remove entries that don't have a description or have empty descriptions.
+        
+        Args:
+            data: List of technology entries
+        Returns:
+            Filtered list with only entries containing descriptions
+        """
+        original_count = len(data)
+        filtered_data = [
+            entry for entry in data 
+            if entry.get('ip_description') and len(entry['ip_description'].strip()) > 0
+        ]
+        removed_count = original_count - len(filtered_data)
+        print(f"Removed {removed_count} entries without descriptions")
+        return filtered_data
+
     def load_data(self, input_file):
-        """Load data from JSON file"""
+        """Load data from JSON file, clean null values, and filter empty descriptions"""
         print(f"Loading data from {input_file}...")
         with open(input_file, 'r') as f:
             self.data = json.load(f)
-        print(f"Loaded {len(self.data)} technology entries")
+        # Clean null values after loading
+        self.data = self.clean_null_values(self.data)
+        # Filter out entries without descriptions
+        self.data = self.filter_empty_descriptions(self.data)
+        print(f"Loaded, cleaned, and filtered to {len(self.data)} technology entries")
     
     def save_data(self, output_file):
         """Save processed data to JSON file"""
@@ -64,7 +114,7 @@ class TechTransferSummarizer:
             Focus only on factual information from the text. Be concise and specific."""
 
         response = self.client.chat.completions.create(
-            model="deepseek-chat",
+            model="gpt-4o-mini",
             messages=[{"role": "user", "content": prompt}],
             temperature=0.3,
             max_tokens=800
@@ -83,7 +133,7 @@ class TechTransferSummarizer:
             Focus on the key benefit or innovation. Be specific but concise."""
 
         response = self.client.chat.completions.create(
-            model="deepseek-chat",
+            model="gpt-4o-mini",
             messages=[{"role": "user", "content": prompt}],
             temperature=0.3,
             max_tokens=100
